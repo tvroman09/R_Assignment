@@ -1,0 +1,1855 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.433">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>R Assignment</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="R Assignment Final_files/libs/clipboard/clipboard.min.js"></script>
+<script src="R Assignment Final_files/libs/quarto-html/quarto.js"></script>
+<script src="R Assignment Final_files/libs/quarto-html/popper.min.js"></script>
+<script src="R Assignment Final_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="R Assignment Final_files/libs/quarto-html/anchor.min.js"></script>
+<link href="R Assignment Final_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="R Assignment Final_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="R Assignment Final_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="R Assignment Final_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="R Assignment Final_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">R Assignment</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="taylor-vroman" class="level2">
+<h2 class="anchored" data-anchor-id="taylor-vroman">Taylor Vroman</h2>
+</section>
+<section id="r-assignment" class="level2">
+<h2 class="anchored" data-anchor-id="r-assignment">R Assignment</h2>
+<p>This code reads in the files</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'dplyr' was built under R version 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'tidyverse' was built under R version 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'ggplot2' was built under R version 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'tibble' was built under R version 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'lubridate' was built under R version 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ forcats   1.0.0     ✔ readr     2.1.4
+✔ ggplot2   3.4.4     ✔ stringr   1.5.0
+✔ lubridate 1.9.3     ✔ tibble    3.2.1
+✔ purrr     1.0.1     ✔ tidyr     1.3.0</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"C:/Users/18153/Downloads"</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co">#read in files as data frames</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>fang <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">'fang_et_al_genotypes.txt'</span>, <span class="at">header =</span> T)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">#fill = TRUE for empty cells</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>snp <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">'snp_position.txt'</span>, <span class="at">header=</span>T, <span class="at">fill=</span>T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Data Inspection</strong></p>
+<p>The following data inspection tells us the following pieces of information:</p>
+<p><em>Fang</em></p>
+<ul>
+<li><p>File size: 22681376 bytes</p></li>
+<li><p>Dimension: 2782x986</p></li>
+<li><p>Class: data frame</p></li>
+</ul>
+<p><em>SNP</em></p>
+<ul>
+<li><p>File size: 525582 bytes</p></li>
+<li><p>Dimension: 1017x15</p></li>
+<li><p>Class: data frame</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(fang)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2782  986</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(snp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1017   15</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(fang)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Sample_ID   JG_OTU Group abph1.20 abph1.22 ae1.3 ae1.4 ae1.5 an1.4 ba1.6
+1     SL-15 T-aust-1 TRIPS      ?/?      ?/?   T/T   G/G   T/T   C/C   ?/?
+2     SL-16 T-aust-2 TRIPS      ?/?      ?/?   T/T   ?/?   T/T   C/C   A/G
+3     SL-11 T-brav-1 TRIPS      ?/?      ?/?   T/T   G/G   T/T   ?/?   G/G
+4     SL-12 T-brav-2 TRIPS      ?/?      ?/?   T/T   G/G   T/T   C/C   G/G
+5     SL-18   T-cund TRIPS      ?/?      ?/?   T/T   G/G   T/T   C/C   ?/?
+6      SL-2 T-dact-1 TRIPS      ?/?      ?/?   T/T   G/G   T/T   C/C   A/G
+  ba1.9 bt2.5 bt2.7 bt2.8 Fea2.1 Fea2.5 id1.3 lg2.11 lg2.2 pbf1.1 pbf1.2 pbf1.3
+1   G/G   ?/?   A/A   ?/?    C/C    A/A   T/T    C/C   A/A    ?/?    ?/?    ?/?
+2   G/G   ?/?   A/A   ?/?    C/C    A/A   T/T    C/C   A/A    T/T    ?/?    ?/?
+3   G/G   C/C   A/A   ?/?    ?/?    A/A   T/T    C/C   A/A    T/T    ?/?    ?/?
+4   G/G   C/C   A/A   ?/?    ?/?    A/A   T/T    C/C   A/A    T/T    ?/?    ?/?
+5   G/G   ?/?   A/A   ?/?    C/C    A/A   T/T    C/C   A/A    T/T    ?/?    ?/?
+6   G/G   ?/?   A/A   ?/?    C/C    A/A   T/T    C/C   A/A    T/T    ?/?    ?/?
+  pbf1.5 pbf1.6 pbf1.7 pbf1.8 PZA00003.11 PZA00004.2 PZA00005.8 PZA00005.9
+1    ?/?    ?/?    C/C    C/C         ?/?        T/T        G/G        C/C
+2    ?/?    ?/?    C/C    C/C         ?/?        T/T        G/G        C/C
+3    A/A    ?/?    C/C    C/C         C/C        ?/?        G/G        C/C
+4    A/A    ?/?    C/C    C/C         ?/?        T/T        G/G        C/C
+5    ?/?    ?/?    C/C    C/C         C/C        T/T        G/G        C/C
+6    ?/?    ?/?    C/C    C/C         C/C        T/T        G/G        C/C
+  PZA00006.13 PZA00006.14 PZA00008.1 PZA00010.5 PZA00013.10 PZA00013.11
+1         A/A         ?/?        C/C        C/C         A/A         C/C
+2         A/A         G/G        C/C        C/C         A/A         C/C
+3         A/A         G/G        C/C        C/C         A/A         C/T
+4         A/A         G/G        C/C        C/C         A/A         C/T
+5         A/A         G/G        C/C        ?/?         A/A         C/C
+6         A/A         G/G        C/G        ?/?         ?/?         C/C
+  PZA00013.9 PZA00015.4 PZA00017.1 PZA00018.5 PZA00029.11 PZA00029.12
+1        T/T        ?/?        G/G        C/C         C/C         T/T
+2        T/T        ?/?        G/G        C/C         C/C         T/T
+3        T/T        ?/?        G/G        C/C         C/C         T/T
+4        T/T        ?/?        G/G        C/C         C/C         T/T
+5        T/T        ?/?        G/G        C/C         C/C         T/T
+6        T/T        ?/?        G/G        C/C         ?/?         T/T
+  PZA00030.11 PZA00031.5 PZA00041.3 PZA00042.2 PZA00042.5 PZA00043.7 PZA00045.1
+1         ?/?        C/C        ?/?        ?/?        C/C        T/T        G/G
+2         ?/?        C/C        ?/?        T/T        C/C        T/T        G/G
+3         ?/?        C/C        ?/?        ?/?        C/C        T/T        G/G
+4         ?/?        C/C        ?/?        ?/?        C/C        T/T        G/G
+5         ?/?        C/C        ?/?        T/T        C/C        T/T        G/G
+6         ?/?        ?/?        ?/?        T/T        C/C        T/T        G/G
+  PZA00047.2 PZA00049.12 PZA00050.9 PZA00051.2 PZA00058.5 PZA00058.6 PZA00060.2
+1        C/C         ?/?        A/A        A/A        ?/?        T/T        ?/?
+2        C/C         ?/?        A/A        A/A        ?/?        ?/?        ?/?
+3        C/C         T/T        ?/?        A/A        ?/?        T/T        C/C
+4        C/C         T/T        ?/?        A/A        ?/?        T/T        C/C
+5        C/C         ?/?        A/A        A/A        ?/?        ?/?        ?/?
+6        ?/?         ?/?        A/A        A/A        ?/?        ?/?        C/C
+  PZA00061.1 PZA00065.2 PZA00069.4 PZA00070.5 PZA00078.2 PZA00079.1 PZA00081.17
+1        ?/?        C/C        C/C        C/C        C/C        C/C         ?/?
+2        ?/?        C/C        C/C        C/C        C/C        ?/?         T/T
+3        ?/?        C/C        C/C        C/C        C/C        C/C         T/T
+4        ?/?        C/C        C/C        C/C        C/C        C/C         T/T
+5        ?/?        C/C        C/C        C/C        C/C        C/C         ?/?
+6        ?/?        C/C        C/C        C/C        C/C        C/C         ?/?
+  PZA00084.2 PZA00084.3 PZA00086.8 PZA00088.3 PZA00090.2 PZA00092.1 PZA00092.5
+1        C/C        T/T        ?/?        G/G        A/A        ?/?        ?/?
+2        C/C        T/T        ?/?        G/G        A/A        ?/?        C/C
+3        C/C        T/T        ?/?        G/G        ?/?        T/T        C/C
+4        C/C        T/T        ?/?        G/G        ?/?        ?/?        ?/?
+5        C/C        T/T        ?/?        G/G        A/A        T/T        ?/?
+6        C/C        T/T        ?/?        G/G        A/A        ?/?        C/C
+  PZA00093.2 PZA00096.26 PZA00097.13 PZA00098.14 PZA00100.10 PZA00100.12
+1        ?/?         T/T         G/G         ?/?         ?/?         T/T
+2        ?/?         T/T         G/G         ?/?         ?/?         ?/?
+3        ?/?         T/T         G/G         C/C         ?/?         T/T
+4        ?/?         T/T         G/G         ?/?         ?/?         T/T
+5        ?/?         T/T         G/G         ?/?         ?/?         T/T
+6        ?/?         ?/?         G/G         C/C         ?/?         ?/?
+  PZA00100.14 PZA00100.9 PZA00103.20 PZA00106.9 PZA00107.18 PZA00108.12
+1         ?/?        C/C         A/A        G/G         ?/?         ?/?
+2         A/A        C/C         A/A        G/G         ?/?         C/C
+3         A/A        C/C         A/A        G/G         ?/?         C/C
+4         A/A        ?/?         A/A        G/G         ?/?         C/C
+5         ?/?        C/C         A/A        ?/?         ?/?         ?/?
+6         A/A        C/C         A/A        G/G         ?/?         ?/?
+  PZA00108.14 PZA00108.15 PZA00109.3 PZA00109.5 PZA00111.2 PZA00111.4
+1         G/G         A/A        A/A        A/A        T/T        C/C
+2         G/G         A/A        A/A        ?/?        T/T        ?/?
+3         G/G         A/A        ?/?        A/A        T/T        C/C
+4         G/G         A/A        ?/?        ?/?        T/T        C/C
+5         G/G         A/A        A/A        A/A        T/T        C/C
+6         G/G         A/A        ?/?        ?/?        ?/?        C/C
+  PZA00111.5 PZA00111.6 PZA00111.8 PZA00114.3 PZA00116.2 PZA00119.4 PZA00120.4
+1        ?/?        C/C        T/T        C/C        C/T        G/G        G/G
+2        ?/?        C/C        T/T        C/C        C/T        G/G        G/G
+3        A/A        C/C        T/T        C/C        C/T        G/G        G/G
+4        A/A        C/C        T/T        C/C        C/T        G/G        G/G
+5        ?/?        ?/?        ?/?        C/C        C/T        G/G        G/G
+6        ?/?        C/C        T/T        ?/?        C/T        G/G        G/G
+  PZA00123.1 PZA00125.2 PZA00131.14 PZA00132.17 PZA00132.18 PZA00132.3
+1        ?/?        ?/?         C/C         T/T         ?/?        C/C
+2        ?/?        ?/?         C/C         T/T         ?/?        C/C
+3        ?/?        ?/?         C/C         T/T         T/T        C/C
+4        ?/?        ?/?         C/C         T/T         ?/?        C/C
+5        ?/?        ?/?         C/C         T/T         T/T        C/C
+6        ?/?        A/A         C/C         G/T         T/T        C/C
+  PZA00135.6 PZA00137.2 PZA00139.14 PZA00140.10 PZA00140.6 PZA00140.9
+1        T/T        T/T         ?/?         ?/?        A/A        G/T
+2        T/T        T/T         ?/?         ?/?        A/A        G/T
+3        T/T        T/T         A/A         G/G        A/A        G/T
+4        ?/?        T/T         ?/?         ?/?        A/A        G/T
+5        T/T        ?/?         A/A         G/G        A/A        ?/?
+6        T/T        ?/?         A/A         G/G        A/A        G/G
+  PZA00142.6 PZA00148.2 PZA00153.3 PZA00153.6 PZA00163.4 PZA00164.1 PZA00164.2
+1        G/G        T/T        ?/?        ?/?        ?/?        ?/?        C/C
+2        G/G        A/T        ?/?        ?/?        ?/?        ?/?        C/C
+3        G/G        ?/?        ?/?        G/G        C/C        C/C        ?/?
+4        G/G        ?/?        ?/?        ?/?        C/C        C/C        ?/?
+5        G/G        ?/?        ?/?        G/G        C/C        ?/?        C/C
+6        G/G        ?/?        ?/?        G/G        C/C        C/C        C/C
+  PZA00164.3 PZA00166.1 PZA00166.3 PZA00170.1 PZA00170.3 PZA00170.4 PZA00174.1
+1        G/G        A/A        T/T        T/T        T/T        C/C        ?/?
+2        G/G        A/A        T/T        T/T        T/T        C/C        ?/?
+3        G/G        ?/?        T/T        T/T        T/T        C/C        A/A
+4        G/G        ?/?        T/T        T/T        ?/?        C/C        ?/?
+5        G/G        A/A        T/T        T/T        T/T        C/C        A/A
+6        G/G        A/A        T/T        T/T        ?/?        C/C        A/A
+  PZA00174.2 PZA00175.2 PZA00176.8 PZA00177.4 PZA00178.3 PZA00182.3 PZA00182.4
+1        ?/?        A/A        G/G        ?/?        T/T        ?/?        ?/?
+2        ?/?        A/A        G/G        ?/?        T/T        ?/?        ?/?
+3        ?/?        A/A        G/G        ?/?        T/T        A/A        ?/?
+4        ?/?        A/A        G/G        ?/?        T/T        ?/?        ?/?
+5        ?/?        A/A        G/G        T/T        T/T        ?/?        ?/?
+6        ?/?        A/A        G/G        ?/?        T/T        ?/?        ?/?
+  PZA00184.1 PZA00184.4 PZA00188.1 PZA00188.3 PZA00191.5 PZA00192.6 PZA00192.7
+1        ?/?        ?/?        A/A        A/A        T/T        A/A        ?/?
+2        ?/?        ?/?        A/A        A/A        T/T        A/A        ?/?
+3        ?/?        ?/?        A/A        A/A        T/T        A/A        ?/?
+4        ?/?        ?/?        A/A        A/A        T/T        A/A        ?/?
+5        ?/?        ?/?        ?/?        A/A        T/T        A/A        ?/?
+6        ?/?        ?/?        A/A        A/A        T/T        ?/?        ?/?
+  PZA00193.2 PZA00198.39 PZA00200.11 PZA00200.17 PZA00200.9 PZA00201.2
+1        ?/?         ?/?         A/A         T/T        G/G        A/A
+2        ?/?         C/T         A/A         T/T        G/G        A/A
+3        C/T         C/C         A/A         T/T        G/G        A/A
+4        C/T         C/C         A/A         T/T        G/G        A/A
+5        T/T         ?/?         A/A         T/T        G/G        A/A
+6        T/T         ?/?         A/A         ?/?        ?/?        A/A
+  PZA00204.1 PZA00210.1 PZA00210.6 PZA00211.7 PZA00212.1 PZA00213.19 PZA00214.1
+1        C/C        ?/?        ?/?        T/T        G/G         C/C        A/A
+2        C/C        G/G        ?/?        ?/?        ?/?         C/C        A/A
+3        C/C        G/G        A/A        T/T        ?/?         C/C        A/A
+4        C/C        G/G        ?/?        T/T        ?/?         C/C        A/A
+5        C/C        G/G        A/A        T/T        G/G         C/C        A/A
+6        C/C        ?/?        A/A        ?/?        G/G         ?/?        A/A
+  PZA00216.9 PZA00218.1 PZA00218.6 PZA00219.7 PZA00220.11 PZA00220.12
+1        A/G        G/G        C/C        ?/?         G/G         T/T
+2        A/G        G/G        C/C        C/C         G/G         G/G
+3        A/A        G/G        C/C        T/T         G/G         T/T
+4        A/A        G/G        C/C        T/T         G/G         T/T
+5        A/A        ?/?        C/C        T/T         G/G         G/G
+6        A/A        ?/?        C/C        ?/?         G/G         G/G
+  PZA00221.7 PZA00225.8 PZA00226.7 PZA00227.8 PZA00230.5 PZA00232.24
+1        A/A        T/T        G/G        G/G        ?/?         G/G
+2        A/A        T/T        G/G        G/G        ?/?         G/G
+3        G/G        C/C        G/G        G/G        ?/?         G/G
+4        G/G        C/C        G/G        G/G        ?/?         G/G
+5        G/G        T/T        G/G        G/G        ?/?         G/G
+6        A/A        C/C        G/G        G/G        ?/?         G/G
+  PZA00234.21 PZA00235.6 PZA00235.8 PZA00237.2 PZA00237.7 PZA00237.8 PZA00238.3
+1         C/C        T/T        G/G        ?/?        ?/?        G/G        G/G
+2         C/C        T/T        G/G        ?/?        ?/?        G/G        G/G
+3         C/C        T/T        G/G        A/A        ?/?        G/G        G/G
+4         C/C        T/T        G/G        A/A        ?/?        G/G        G/G
+5         C/C        T/T        G/G        ?/?        ?/?        G/G        G/G
+6         C/C        T/T        G/G        A/A        ?/?        G/G        ?/?
+  PZA00240.9 PZA00241.6 PZA00243.27 PZA00245.14 PZA00245.16 PZA00245.17
+1        G/G        T/T         A/A         T/T         ?/?         ?/?
+2        ?/?        T/T         A/A         T/T         ?/?         ?/?
+3        G/G        T/T         A/A         T/T         ?/?         ?/?
+4        G/G        T/T         A/A         T/T         ?/?         ?/?
+5        G/G        T/T         A/A         T/T         C/C         ?/?
+6        A/G        ?/?         A/A         T/T         C/C         ?/?
+  PZA00245.18 PZA00245.19 PZA00249.2 PZA00250.1 PZA00251.1 PZA00254.3
+1         ?/?         ?/?        C/C        ?/?        ?/?        A/A
+2         ?/?         ?/?        C/C        ?/?        ?/?        A/A
+3         ?/?         ?/?        C/C        G/G        G/G        A/A
+4         ?/?         ?/?        C/C        G/G        G/G        A/A
+5         ?/?         ?/?        C/C        ?/?        ?/?        A/A
+6         ?/?         ?/?        C/C        ?/?        G/G        A/A
+  PZA00255.15 PZA00255.17 PZA00256.16 PZA00256.21 PZA00256.23 PZA00257.11
+1         ?/?         G/G         T/T         C/C         T/T         G/G
+2         C/C         G/G         T/T         C/C         T/T         G/G
+3         ?/?         G/G         T/T         C/C         C/T         G/G
+4         ?/?         G/G         T/T         C/C         C/T         G/G
+5         ?/?         G/G         T/T         C/C         T/T         G/G
+6         ?/?         G/G         ?/?         C/C         T/T         G/G
+  PZA00257.22 PZA00261.6 PZA00263.14 PZA00266.5 PZA00270.3 PZA00273.1
+1         C/T        ?/?         C/C        ?/?        ?/?        T/T
+2         ?/?        ?/?         C/C        ?/?        ?/?        T/T
+3         C/T        C/C         C/C        ?/?        ?/?        C/T
+4         C/T        C/C         C/C        ?/?        ?/?        ?/?
+5         C/T        ?/?         C/C        ?/?        ?/?        T/T
+6         T/T        ?/?         C/C        ?/?        ?/?        T/T
+  PZA00274.7 PZA00277.17 PZA00277.9 PZA00280.14 PZA00287.1 PZA00289.11
+1        C/C         ?/?        T/T         G/G        C/C         C/C
+2        C/C         ?/?        T/T         G/G        C/C         C/C
+3        C/C         G/G        T/T         A/G        C/C         C/C
+4        C/C         G/G        T/T         A/G        C/C         C/C
+5        C/C         ?/?        ?/?         G/G        C/C         C/C
+6        C/C         ?/?        ?/?         G/G        C/C         C/C
+  PZA00294.20 PZA00296.6 PZA00297.2 PZA00297.3 PZA00297.4 PZA00298.4 PZA00298.5
+1         C/C        A/A        G/G        T/T        G/G        ?/?        T/T
+2         C/C        A/A        G/G        T/T        G/G        ?/?        T/T
+3         C/C        A/A        ?/?        T/T        G/G        ?/?        T/T
+4         C/C        A/A        G/G        T/T        G/G        ?/?        ?/?
+5         C/C        A/A        ?/?        ?/?        G/G        ?/?        T/T
+6         C/C        A/A        G/G        T/T        G/G        ?/?        ?/?
+  PZA00299.2 PZA00300.12 PZA00300.13 PZA00300.14 PZA00300.16 PZA00301.3
+1        ?/?         T/T         T/T         A/A         C/C        C/C
+2        ?/?         T/T         T/T         A/A         C/C        C/C
+3        A/A         T/T         T/T         A/A         C/C        C/C
+4        ?/?         T/T         T/T         A/A         C/C        C/C
+5        A/A         T/T         T/T         A/A         C/C        C/C
+6        A/A         T/T         T/T         A/A         C/C        C/C
+  PZA00303.19 PZA00303.21 PZA00307.12 PZA00307.14 PZA00307.17 PZA00309.2
+1         ?/?         T/T         C/C         G/G         ?/?        C/C
+2         ?/?         T/T         C/C         G/G         ?/?        C/C
+3         ?/?         T/T         C/C         G/G         ?/?        C/C
+4         ?/?         T/T         C/C         G/G         ?/?        C/C
+5         ?/?         T/T         C/C         G/G         A/A        ?/?
+6         ?/?         T/T         C/C         G/G         A/A        C/C
+  PZA00310.5 PZA00314.6 PZA00314.8 PZA00315.1 PZA00315.6 PZA00318.2 PZA00323.3
+1        G/G        G/G        T/T        ?/?        C/C        C/C        ?/?
+2        G/G        G/G        T/T        ?/?        C/C        C/C        ?/?
+3        G/G        G/G        T/T        ?/?        ?/?        C/C        T/T
+4        G/G        G/G        T/T        ?/?        ?/?        C/C        T/T
+5        G/G        G/G        T/T        ?/?        C/C        C/C        ?/?
+6        G/G        G/G        T/T        ?/?        ?/?        C/C        ?/?
+  PZA00323.4 PZA00326.16 PZA00326.18 PZA00326.19 PZA00332.8 PZA00332.9
+1        C/C         C/C         C/C         C/C        C/C        ?/?
+2        ?/?         C/C         C/C         C/C        C/C        ?/?
+3        ?/?         C/C         C/C         C/C        C/C        G/G
+4        ?/?         C/C         C/C         C/C        C/C        G/G
+5        ?/?         C/C         C/C         C/C        C/C        ?/?
+6        C/C         C/C         C/C         C/C        C/C        G/G
+  PZA00334.2 PZA00335.12 PZA00337.3 PZA00337.4 PZA00337.5 PZA00342.9
+1        A/A         T/T        A/A        G/G        C/C        ?/?
+2        A/A         T/T        A/A        ?/?        C/C        ?/?
+3        A/A         T/T        A/A        G/G        T/T        G/G
+4        A/A         T/T        A/A        G/G        T/T        G/G
+5        A/A         T/T        A/A        G/G        C/C        ?/?
+6        A/A         T/T        A/A        G/G        C/C        G/G
+  PZA00344.10 PZA00345.15 PZA00346.1 PZA00346.2 PZA00346.3 PZA00349.3
+1         C/C         ?/?        T/T        ?/?        ?/?        T/T
+2         C/C         ?/?        T/T        ?/?        ?/?        T/T
+3         C/C         C/C        C/C        A/A        T/T        T/T
+4         C/C         ?/?        C/C        A/A        T/T        T/T
+5         C/C         ?/?        T/T        A/A        ?/?        T/T
+6         C/C         C/C        T/T        A/A        C/C        T/T
+  PZA00349.5 PZA00350.2 PZA00352.22 PZA00355.1 PZA00355.2 PZA00356.9 PZA00364.5
+1        G/G        C/C         G/G        A/A        ?/?        G/G        C/C
+2        G/G        C/C         G/G        ?/?        ?/?        G/G        C/C
+3        G/G        C/C         G/G        A/G        C/C        G/G        ?/?
+4        G/G        ?/?         G/G        A/G        C/C        G/G        ?/?
+5        G/G        C/C         G/G        A/A        ?/?        G/G        C/C
+6        G/G        C/C         G/G        A/A        C/C        G/G        C/C
+  PZA00364.6 PZA00367.2 PZA00369.1 PZA00370.1 PZA00370.5 PZA00380.5 PZA00380.7
+1        G/G        G/G        T/T        C/C        ?/?        ?/?        C/C
+2        G/G        G/G        T/T        C/C        A/A        ?/?        C/C
+3        G/G        G/G        T/T        C/C        A/A        T/T        C/C
+4        G/G        G/G        T/T        C/C        A/A        T/T        C/C
+5        G/G        G/G        T/T        C/C        A/A        ?/?        C/C
+6        G/G        G/G        T/T        C/C        A/A        ?/?        C/C
+  PZA00381.3 PZA00381.4 PZA00381.5 PZA00382.17 PZA00385.3 PZA00386.3 PZA00390.6
+1        ?/?        C/C        T/T         ?/?        ?/?        ?/?        T/T
+2        ?/?        C/C        T/T         ?/?        ?/?        ?/?        T/T
+3        ?/?        C/C        C/T         A/A        ?/?        ?/?        C/T
+4        ?/?        C/C        ?/?         A/A        ?/?        ?/?        C/T
+5        ?/?        C/C        C/T         ?/?        ?/?        ?/?        ?/?
+6        ?/?        C/C        ?/?         A/A        ?/?        ?/?        T/T
+  PZA00391.2 PZA00392.3 PZA00392.4 PZA00393.1 PZA00393.4 PZA00394.11 PZA00395.1
+1        ?/?        A/A        T/T        ?/?        G/G         C/C        C/C
+2        ?/?        A/A        T/T        ?/?        G/G         C/C        C/C
+3        A/A        A/A        T/T        ?/?        G/G         C/C        C/C
+4        A/A        A/A        T/T        ?/?        G/G         C/C        C/C
+5        ?/?        A/A        T/T        T/T        G/G         C/C        ?/?
+6        A/A        A/A        T/T        ?/?        G/G         C/C        C/C
+  PZA00395.2 PZA00396.12 PZA00401.11 PZA00401.6 PZA00406.1 PZA00407.9
+1        ?/?         A/A         ?/?        G/G        C/C        ?/?
+2        ?/?         A/A         ?/?        G/G        C/C        ?/?
+3        ?/?         G/G         T/T        G/G        C/C        ?/?
+4        ?/?         G/G         T/T        G/G        C/C        ?/?
+5        ?/?         A/A         ?/?        G/G        C/C        ?/?
+6        ?/?         ?/?         T/T        G/G        C/C        ?/?
+  PZA00408.7 PZA00409.3 PZA00411.1 PZA00411.4 PZA00411.5 PZA00413.17
+1        ?/?        G/G        ?/?        A/A        C/C         G/G
+2        ?/?        G/G        ?/?        ?/?        C/C         G/G
+3        ?/?        G/G        ?/?        A/A        C/C         G/G
+4        ?/?        G/G        ?/?        A/A        C/C         G/G
+5        ?/?        G/G        ?/?        A/A        ?/?         ?/?
+6        ?/?        G/G        ?/?        ?/?        ?/?         G/G
+  PZA00413.18 PZA00413.21 PZA00417.2 PZA00417.3 PZA00419.1 PZA00420.4
+1         G/G         G/G        ?/?        C/C        A/A        C/C
+2         G/G         G/G        ?/?        ?/?        A/A        ?/?
+3         G/G         G/G        ?/?        C/C        A/A        T/T
+4         G/G         G/G        ?/?        C/C        A/A        T/T
+5         G/G         G/G        ?/?        ?/?        A/A        ?/?
+6         G/G         G/G        ?/?        ?/?        A/A        ?/?
+  PZA00422.2 PZA00422.5 PZA00422.6 PZA00423.16 PZA00423.17 PZA00424.1
+1        T/T        ?/?        C/C         C/C         C/C        C/C
+2        T/T        ?/?        ?/?         C/C         C/C        C/C
+3        ?/?        G/G        C/C         C/C         C/C        C/C
+4        C/T        ?/?        C/C         C/C         C/C        C/C
+5        T/T        G/T        C/C         C/C         C/T        C/C
+6        T/T        ?/?        C/C         C/C         C/C        C/C
+  PZA00425.4 PZA00425.9 PZA00429.1 PZA00433.5 PZA00436.7 PZA00439.6 PZA00440.1
+1        C/C        G/G        C/T        A/A        C/C        ?/?        C/C
+2        C/C        G/G        C/T        A/A        C/C        ?/?        C/C
+3        C/C        G/G        T/T        A/A        C/C        A/A        C/C
+4        C/C        G/G        T/T        A/A        C/C        A/A        C/C
+5        C/C        G/G        C/T        A/A        C/C        ?/?        C/C
+6        C/C        G/G        C/T        A/A        C/C        A/A        C/C
+  PZA00442.3 PZA00442.4 PZA00442.5 PZA00442.6 PZA00444.1 PZA00444.5 PZA00445.18
+1        G/G        ?/?        C/C        ?/?        G/G        C/C         C/C
+2        G/G        ?/?        C/C        ?/?        G/G        C/C         C/C
+3        G/G        T/T        C/C        ?/?        G/G        ?/?         C/C
+4        G/G        T/T        C/C        ?/?        G/G        ?/?         C/C
+5        G/G        T/T        C/C        ?/?        G/G        C/C         C/C
+6        G/G        T/T        C/C        ?/?        G/G        C/C         C/C
+  PZA00449.2 PZA00452.4 PZA00458.6 PZA00459.5 PZA00460.3 PZA00460.5 PZA00460.7
+1        G/G        ?/?        ?/?        T/T        T/T        T/T        C/T
+2        G/G        ?/?        ?/?        T/T        T/T        ?/?        ?/?
+3        G/G        ?/?        ?/?        T/T        C/T        T/T        C/T
+4        G/G        ?/?        ?/?        T/T        C/T        T/T        C/T
+5        G/G        ?/?        C/C        T/T        T/T        T/T        C/T
+6        G/G        ?/?        ?/?        T/T        C/C        T/T        T/T
+  PZA00462.2 PZA00463.3 PZA00466.1 PZA00468.11 PZA00468.7 PZA00470.1 PZA00471.2
+1        G/G        T/T        G/G         ?/?        A/A        ?/?        G/G
+2        G/G        T/T        G/G         ?/?        A/A        ?/?        G/G
+3        G/G        T/T        G/G         C/C        A/A        G/G        G/G
+4        G/G        T/T        G/G         C/C        A/A        G/G        G/G
+5        G/G        T/T        G/G         C/C        G/G        G/G        G/G
+6        G/G        T/T        G/G         C/C        A/A        G/G        G/G
+  PZA00471.3 PZA00471.4 PZA00472.2 PZA00477.10 PZA00477.11 PZA00477.5
+1        ?/?        G/G        C/C         G/G         A/G        ?/?
+2        ?/?        G/G        C/C         G/G         A/A        ?/?
+3        G/G        ?/?        C/C         G/G         G/G        T/T
+4        G/G        ?/?        C/C         G/G         G/G        T/T
+5        G/G        G/G        C/C         G/G         G/G        ?/?
+6        G/G        G/G        C/C         G/G         G/G        ?/?
+  PZA00477.9 PZA00478.10 PZA00478.11 PZA00478.7 PZA00478.9 PZA00480.10
+1        C/C         C/C         ?/?        G/G        ?/?         ?/?
+2        C/C         C/C         ?/?        G/G        ?/?         ?/?
+3        C/C         C/C         ?/?        G/G        ?/?         C/C
+4        C/C         C/C         ?/?        G/G        ?/?         C/C
+5        C/C         C/C         ?/?        ?/?        ?/?         C/C
+6        C/C         C/C         ?/?        G/G        ?/?         ?/?
+  PZA00481.7 PZA00484.5 PZA00485.2 PZA00486.2 PZA00487.16 PZA00487.24
+1        ?/?        ?/?        G/G        ?/?         G/G         A/A
+2        ?/?        ?/?        G/G        ?/?         G/G         ?/?
+3        ?/?        ?/?        ?/?        A/A         G/G         ?/?
+4        ?/?        ?/?        A/G        A/A         G/G         ?/?
+5        ?/?        ?/?        G/G        ?/?         G/G         ?/?
+6        ?/?        ?/?        A/G        ?/?         A/G         ?/?
+  PZA00487.26 PZA00489.1 PZA00493.1 PZA00493.2 PZA00493.5 PZA00495.3 PZA00495.4
+1         C/C        C/C        T/T        C/C        T/T        A/A        C/C
+2         ?/?        C/C        T/T        C/C        T/T        A/A        C/C
+3         C/C        C/C        T/T        C/C        T/T        A/G        C/C
+4         C/C        C/C        T/T        C/C        T/T        A/G        C/C
+5         C/C        ?/?        T/T        C/C        T/T        A/A        C/C
+6         C/C        C/C        T/T        C/C        T/T        A/A        C/C
+  PZA00495.6 PZA00496.1 PZA00497.1 PZA00497.4 PZA00498.4 PZA00499.10
+1        ?/?        A/A        ?/?        G/G        A/A         G/G
+2        ?/?        A/A        ?/?        G/G        ?/?         G/G
+3        T/T        A/A        ?/?        G/G        A/A         G/G
+4        ?/?        A/A        ?/?        G/G        A/A         G/G
+5        ?/?        A/A        ?/?        G/G        ?/?         G/G
+6        T/T        A/A        ?/?        G/G        ?/?         G/G
+  PZA00499.12 PZA00499.3 PZA00501.12 PZA00501.14 PZA00502.5 PZA00503.5
+1         A/A        T/T         G/G         ?/?        C/C        C/C
+2         A/A        T/T         G/G         C/C        C/C        C/C
+3         A/A        ?/?         G/G         C/C        C/C        C/C
+4         A/A        T/T         G/G         C/C        C/C        C/C
+5         A/A        T/T         G/G         C/C        C/C        C/C
+6         A/A        T/T         G/G         C/C        C/C        C/C
+  PZA00504.1 PZA00504.2 PZA00505.4 PZA00505.8 PZA00510.2 PZA00510.3 PZA00514.1
+1        C/C        C/C        C/C        ?/?        T/T        ?/?        T/T
+2        C/C        C/C        C/C        A/G        ?/?        ?/?        T/T
+3        C/C        C/C        C/C        G/G        T/T        A/A        T/T
+4        C/C        C/C        C/C        A/G        T/T        ?/?        T/T
+5        C/C        C/C        ?/?        ?/?        T/T        A/A        T/T
+6        C/C        C/C        C/C        A/G        T/T        ?/?        C/T
+  PZA00514.6 PZA00514.7 PZA00515.14 PZA00516.3 PZA00517.6 PZA00522.12
+1        C/C        T/T         ?/?        ?/?        A/G         ?/?
+2        C/C        T/T         ?/?        ?/?        ?/?         ?/?
+3        C/C        T/T         ?/?        ?/?        A/A         A/A
+4        C/C        T/T         ?/?        ?/?        A/A         ?/?
+5        C/C        T/T         ?/?        ?/?        ?/?         A/G
+6        C/C        T/T         A/A        A/A        ?/?         A/A
+  PZA00523.2 PZA00525.16 PZA00525.2 PZA00527.6 PZA00527.9 PZA00529.3 PZA00531.1
+1        ?/?         C/C        ?/?        T/T        G/G        G/G        C/C
+2        ?/?         C/C        ?/?        T/T        G/G        G/G        C/C
+3        G/G         C/C        ?/?        ?/?        G/G        G/G        C/C
+4        ?/?         C/C        ?/?        T/T        G/G        G/G        C/C
+5        G/G         C/C        ?/?        T/T        G/G        G/G        ?/?
+6        G/G         C/C        ?/?        T/T        G/G        G/G        C/C
+  PZA00533.3 PZA00533.4 PZA00533.5 PZA00533.6 PZA00534.2 PZA00536.2 PZA00538.12
+1        ?/?        T/T        G/G        C/C        ?/?        ?/?         G/G
+2        ?/?        T/T        G/G        ?/?        ?/?        ?/?         G/G
+3        ?/?        T/T        G/G        C/C        G/G        ?/?         G/G
+4        C/C        T/T        G/G        C/C        G/G        ?/?         G/G
+5        ?/?        T/T        G/G        ?/?        ?/?        ?/?         G/G
+6        C/C        T/T        G/G        ?/?        ?/?        ?/?         G/G
+  PZA00538.16 PZA00538.8 PZA00543.2 PZA00543.4 PZA00543.5 PZA00545.21
+1         C/C        G/G        C/C        ?/?        G/G         G/G
+2         C/C        G/G        C/C        ?/?        G/G         G/G
+3         C/C        G/G        C/C        A/A        G/G         G/G
+4         C/C        G/G        C/C        A/A        G/G         G/G
+5         C/C        G/G        C/C        A/A        G/G         G/G
+6         C/C        G/G        C/C        A/A        G/G         G/G
+  PZA00545.22 PZA00545.4 PZA00547.13 PZA00547.18 PZA00552.4 PZA00560.1
+1         C/C        C/C         T/T         ?/?        ?/?        ?/?
+2         C/C        ?/?         ?/?         ?/?        ?/?        ?/?
+3         C/C        C/C         T/T         G/G        C/C        G/G
+4         C/C        C/C         T/T         G/G        C/C        G/G
+5         C/C        ?/?         T/T         ?/?        ?/?        ?/?
+6         ?/?        C/C         T/T         G/G        ?/?        G/G
+  PZA00560.2 PZA00562.4 PZA00565.3 PZA00566.5 PZA00568.19 PZA00573.3 PZA00578.1
+1        G/G        G/G        A/A        A/A         C/C        A/A        C/C
+2        G/G        G/G        A/A        A/A         C/C        A/A        C/C
+3        G/G        G/G        A/G        A/A         C/C        ?/?        C/C
+4        G/G        G/G        A/G        A/A         C/C        A/G        C/C
+5        G/G        ?/?        A/A        A/A         C/C        A/A        C/C
+6        G/G        ?/?        A/A        A/A         C/C        ?/?        C/C
+  PZA00579.6 PZA00582.4 PZA00586.1 PZA00587.3 PZA00587.6 PZA00588.2 PZA00588.4
+1        G/G        C/C        T/T        G/G        C/C        T/T        G/G
+2        G/G        C/C        T/T        G/G        ?/?        T/T        G/G
+3        G/G        ?/?        T/T        A/G        C/C        T/T        ?/?
+4        G/G        ?/?        T/T        A/G        C/C        T/T        ?/?
+5        G/G        C/C        T/T        G/G        C/C        T/T        G/G
+6        G/G        ?/?        T/T        G/G        ?/?        T/T        G/G
+  PZA00589.10 PZA00589.8 PZA00589.9 PZA00593.2 PZA00595.3 PZA00600.11
+1         C/C        A/A        ?/?        A/A        C/C         ?/?
+2         C/C        A/A        ?/?        A/A        C/C         ?/?
+3         C/C        A/A        A/A        A/A        C/C         ?/?
+4         C/C        A/A        ?/?        A/A        C/C         ?/?
+5         C/C        A/A        ?/?        A/A        C/C         ?/?
+6         C/C        ?/?        ?/?        ?/?        ?/?         ?/?
+  PZA00603.1 PZA00608.1 PZA00608.5 PZA00610.18 PZA00610.9 PZA00613.22
+1        T/T        ?/?        ?/?         C/C        ?/?         T/T
+2        T/T        ?/?        C/T         C/C        ?/?         T/T
+3        T/T        ?/?        C/C         C/C        C/C         T/T
+4        T/T        ?/?        C/C         C/C        ?/?         T/T
+5        T/T        ?/?        ?/?         C/C        C/C         T/T
+6        ?/?        ?/?        T/T         C/C        C/C         T/T
+  PZA00614.12 PZA00615.3 PZA00615.6 PZA00615.8 PZA00617.16 PZA00618.22
+1         G/G        G/G        G/G        ?/?         C/C         G/G
+2         G/G        G/G        G/G        ?/?         C/C         G/G
+3         G/G        G/G        G/G        C/C         C/C         G/G
+4         G/G        G/G        A/G        ?/?         C/C         G/G
+5         G/G        G/G        G/G        C/C         C/C         G/G
+6         G/G        G/G        A/G        C/C         C/C         G/G
+  PZA00620.2 PZA00621.2 PZA00622.1 PZA00622.2 PZA00623.2 PZA00626.3 PZA00626.4
+1        ?/?        C/C        A/A        ?/?        ?/?        ?/?        ?/?
+2        ?/?        C/C        A/A        T/T        ?/?        ?/?        ?/?
+3        A/C        C/C        ?/?        T/T        G/G        ?/?        ?/?
+4        ?/?        C/C        ?/?        T/T        ?/?        ?/?        ?/?
+5        C/C        C/C        A/C        C/T        ?/?        ?/?        ?/?
+6        C/C        A/C        A/A        T/T        ?/?        ?/?        ?/?
+  PZA00630.9 PZA00636.5 PZA00636.6 PZA00637.4 PZA00639.12 PZA00639.13
+1        ?/?        A/A        G/G        C/C         G/G         G/G
+2        ?/?        A/A        G/G        C/C         G/G         G/G
+3        ?/?        ?/?        ?/?        T/T         G/G         G/G
+4        ?/?        ?/?        ?/?        T/T         G/G         G/G
+5        ?/?        A/A        G/G        ?/?         ?/?         G/G
+6        ?/?        ?/?        ?/?        ?/?         G/G         G/G
+  PZA00639.15 PZA00641.7 PZA00641.8 PZA00644.11 PZA00647.9 PZA00650.8
+1         T/T        A/A        ?/?         C/C        ?/?        ?/?
+2         T/T        A/A        ?/?         C/C        ?/?        ?/?
+3         T/T        ?/?        G/G         C/C        ?/?        ?/?
+4         T/T        A/A        G/G         C/C        ?/?        ?/?
+5         T/T        A/A        G/G         C/C        G/G        ?/?
+6         T/T        A/A        C/C         C/C        ?/?        ?/?
+  PZA00654.10 PZA00654.12 PZA00655.1 PZA00656.15 PZA00656.16 PZA00656.18
+1         G/G         C/C        ?/?         A/A         T/T         ?/?
+2         G/G         C/C        ?/?         A/A         T/T         G/G
+3         ?/?         C/C        G/G         A/A         T/T         G/G
+4         ?/?         C/C        G/G         A/A         T/T         G/G
+5         G/G         C/C        G/G         A/A         T/T         G/G
+6         G/G         C/C        G/G         A/A         ?/?         G/G
+  PZA00656.4 PZA00658.19 PZA00658.23 PZA00662.3 PZA00665.6 PZA00667.1
+1        A/A         A/A         A/A        G/G        ?/?        ?/?
+2        A/A         A/A         A/A        G/G        ?/?        ?/?
+3        A/A         A/A         A/A        G/G        ?/?        G/G
+4        A/A         A/A         A/A        G/G        ?/?        G/G
+5        A/A         A/A         ?/?        G/G        ?/?        G/G
+6        A/A         A/A         A/A        ?/?        ?/?        G/G
+  PZA00672.6 PZA00672.8 PZA00673.2 PZA00674.3 PZA00676.2 PZA00680.1 PZA00680.3
+1        ?/?        G/G        ?/?        G/G        ?/?        G/G        C/C
+2        ?/?        G/G        ?/?        G/G        ?/?        G/G        C/C
+3        A/A        G/G        ?/?        A/A        G/G        G/G        A/C
+4        A/A        G/G        G/T        A/A        A/G        G/G        A/C
+5        ?/?        ?/?        T/T        G/G        G/G        G/G        C/C
+6        ?/?        ?/?        ?/?        G/G        G/G        G/G        C/C
+  PZA00682.2 PZA00684.12 PZA00686.8 PZA00692.5 PZA00693.3 PZA00695.1 PZA00698.4
+1        G/G         ?/?        ?/?        A/A        G/G        ?/?        ?/?
+2        G/G         ?/?        ?/?        A/A        G/G        ?/?        A/G
+3        G/G         ?/?        T/T        A/A        G/G        ?/?        ?/?
+4        ?/?         ?/?        T/T        A/A        G/G        ?/?        ?/?
+5        C/C         ?/?        T/T        A/A        G/G        ?/?        ?/?
+6        G/G         ?/?        C/C        A/A        G/G        ?/?        A/A
+  PZA00700.3 PZA00704.11 PZA00705.5 PZA00706.16 PZA00710.1 PZA00710.16
+1        A/A         ?/?        C/C         C/C        ?/?         G/G
+2        A/A         ?/?        C/C         C/C        ?/?         G/G
+3        A/A         ?/?        C/C         C/C        ?/?         G/G
+4        A/A         ?/?        C/C         C/C        ?/?         G/G
+5        ?/?         ?/?        C/C         C/C        ?/?         G/G
+6        A/A         G/G        C/C         C/C        ?/?         G/G
+  PZA00712.4 PZA00715.3 PZA00717.14 PZA00719.1 PZA00719.2 PZA00719.3 PZA00720.2
+1        C/C        G/G         ?/?        A/G        ?/?        T/T        ?/?
+2        C/C        G/G         ?/?        ?/?        ?/?        T/T        ?/?
+3        C/C        G/G         ?/?        G/G        ?/?        T/T        ?/?
+4        C/C        G/G         ?/?        G/G        ?/?        T/T        ?/?
+5        C/C        G/G         ?/?        A/G        ?/?        T/T        ?/?
+6        C/C        G/G         ?/?        A/A        ?/?        T/T        ?/?
+  PZA00720.3 PZA00721.4 PZA00721.5 PZA00725.4 PZA00726.6 PZA00726.7 PZA00726.9
+1        A/G        A/A        ?/?        A/A        T/T        G/G        ?/?
+2        A/G        A/A        ?/?        A/A        T/T        G/G        ?/?
+3        G/G        G/G        C/C        ?/?        C/C        G/G        ?/?
+4        G/G        G/G        ?/?        G/G        C/C        G/G        ?/?
+5        G/G        ?/?        C/C        A/A        T/T        G/G        ?/?
+6        A/G        G/G        C/C        A/A        ?/?        G/G        ?/?
+  PZA00727.11 PZA00727.12 PZA00729.18 PZA00729.19 PZA00730.2 PZA00731.6
+1         C/C         A/A         T/T         G/G        ?/?        ?/?
+2         C/C         A/A         T/T         ?/?        ?/?        ?/?
+3         C/C         A/A         T/T         A/A        ?/?        ?/?
+4         C/C         A/A         T/T         A/A        ?/?        ?/?
+5         C/C         A/A         T/T         G/G        ?/?        ?/?
+6         C/C         A/A         ?/?         A/A        ?/?        ?/?
+  PZA00731.7 PZA01104.1 PZA01149.1 PZA01149.3 PZA01182.1 PZA01240.1 PZA01240.2
+1        G/G        A/A        ?/?        ?/?        ?/?        G/G        G/G
+2        G/G        A/A        ?/?        ?/?        ?/?        G/G        G/G
+3        G/G        A/A        ?/?        ?/?        C/C        G/G        G/G
+4        G/G        A/A        ?/?        ?/?        C/C        G/G        ?/?
+5        G/G        A/A        C/C        ?/?        C/C        G/G        ?/?
+6        G/G        A/A        C/C        ?/?        C/C        G/G        G/G
+  PZA01420.1 PZA01420.2 PZA01420.3 PZA01474.2 PZA01637.2 PZA01637.3 PZA01637.4
+1        G/G        ?/?        ?/?        ?/?        ?/?        T/T        C/C
+2        G/G        ?/?        ?/?        C/C        ?/?        T/T        C/C
+3        ?/?        ?/?        ?/?        C/C        ?/?        T/T        C/C
+4        ?/?        ?/?        ?/?        C/C        ?/?        T/T        C/C
+5        ?/?        ?/?        ?/?        ?/?        ?/?        T/T        C/C
+6        ?/?        A/A        ?/?        ?/?        ?/?        T/T        C/C
+  PZA01725.1 PZA01725.2 PZA01782.2 PZA01782.3 PZA01782.4 PZA02789.31
+1        C/C        T/T        C/C        C/C        T/T         C/C
+2        C/C        T/T        C/C        C/C        T/T         C/C
+3        C/C        T/T        C/C        C/C        ?/?         ?/?
+4        C/C        T/T        C/C        C/C        T/T         ?/?
+5        C/C        ?/?        C/C        C/C        ?/?         C/C
+6        C/C        ?/?        C/T        C/C        ?/?         ?/?
+  PZA02789.36 PZA02791.6 PZA02792.16 PZA02792.9 PZA02806.4 PZA02806.9
+1         G/G        ?/?         C/C        C/C        ?/?        T/T
+2         G/G        ?/?         C/C        ?/?        A/A        T/T
+3         G/G        ?/?         C/C        C/C        ?/?        T/T
+4         G/G        ?/?         C/C        C/C        ?/?        T/T
+5         G/G        ?/?         ?/?        C/C        ?/?        T/T
+6         ?/?        ?/?         C/C        C/C        ?/?        T/T
+  PZA02807.5 PZA02808.12 PZA02808.16 PZA02819.35 PZA02820.6 PZA02822.2
+1        T/T         G/G         G/G         ?/?        C/C        G/G
+2        T/T         G/G         G/G         ?/?        G/G        G/G
+3        A/A         G/G         G/G         C/C        C/G        G/G
+4        A/A         G/G         G/G         C/C        ?/?        G/G
+5        T/T         G/G         G/G         ?/?        ?/?        G/G
+6        A/A         G/G         G/G         ?/?        ?/?        G/G
+  PZA02824.1 PZA02824.3 PZA02825.8 PZA02831.5 PZA02837.5 PZA02844.1 PZA02850.18
+1        A/A        C/C        C/C        T/T        C/C        C/C         ?/?
+2        A/A        C/C        C/C        T/T        C/C        ?/?         ?/?
+3        A/A        C/C        ?/?        T/T        C/C        C/C         ?/?
+4        A/A        C/C        ?/?        T/T        C/C        C/C         ?/?
+5        A/A        C/C        C/C        T/T        C/C        ?/?         ?/?
+6        A/A        C/C        C/C        T/T        C/C        ?/?         ?/?
+  PZA02850.4 PZA02853.10 PZA02853.7 PZA02856.1 PZA02862.3 PZA02865.11
+1        ?/?         ?/?        C/C        ?/?        C/C         A/A
+2        ?/?         ?/?        C/C        ?/?        C/C         A/A
+3        ?/?         C/C        C/C        ?/?        C/C         A/A
+4        ?/?         C/C        C/C        ?/?        C/C         A/A
+5        ?/?         ?/?        ?/?        ?/?        C/C         A/G
+6        ?/?         C/C        C/C        ?/?        C/C         A/A
+  PZA02869.2 PZA02869.8 PZA02872.1 PZA02872.3 PZA02878.12 PZA02888.3 PZA02890.3
+1        T/T        ?/?        G/G        A/A         C/C        C/C        T/T
+2        T/T        ?/?        G/G        A/A         C/C        ?/?        ?/?
+3        T/T        C/C        G/G        A/A         C/C        C/C        T/T
+4        T/T        C/C        G/G        A/A         C/C        C/C        T/T
+5        T/T        C/C        G/G        A/A         C/C        C/C        ?/?
+6        T/T        C/C        G/G        ?/?         C/C        C/C        T/T
+  PZA02890.4 PZA02890.5 PZA02894.1 PZA02897.12 PZA02906.12 PZA02906.7
+1        T/T        C/C        C/C         T/T         ?/?        ?/?
+2        T/T        C/C        C/C         T/T         C/C        ?/?
+3        T/T        ?/?        C/C         T/T         T/T        G/G
+4        T/T        C/C        C/C         T/T         ?/?        G/G
+5        T/T        C/C        ?/?         T/T         ?/?        ?/?
+6        T/T        C/C        C/C         T/T         ?/?        G/G
+  PZA02921.9 PZA02923.7 PZA02927.1 PZA02938.5 PZA02939.6 PZA02940.3 PZA02941.3
+1        C/C        G/T        ?/?        G/G        ?/?        ?/?        G/G
+2        C/C        G/T        ?/?        G/G        ?/?        ?/?        G/G
+3        C/C        G/G        T/T        ?/?        ?/?        ?/?        G/G
+4        C/C        G/G        ?/?        G/G        ?/?        ?/?        G/G
+5        C/C        G/T        T/T        G/G        ?/?        A/A        A/G
+6        C/C        G/G        T/T        G/G        ?/?        ?/?        G/G
+  PZA02941.6 PZA02941.8 PZA02947.2 PZA02948.19 PZA02948.21 PZA02948.22
+1        ?/?        C/C        T/T         C/C         C/T         ?/?
+2        ?/?        C/C        T/T         C/C         C/T         ?/?
+3        ?/?        C/C        T/T         C/C         C/C         G/G
+4        ?/?        C/C        T/T         C/C         C/C         G/G
+5        ?/?        C/C        ?/?         C/C         ?/?         G/G
+6        ?/?        C/C        ?/?         C/C         C/C         G/G
+  PZA02949.22 PZA02949.26 PZA02952.10 PZA02954.2 PZA02955.3 PZA02958.17
+1         ?/?         T/T         A/A        C/C        A/A         ?/?
+2         ?/?         T/T         A/A        C/C        A/A         ?/?
+3         ?/?         C/T         A/A        C/C        A/A         C/C
+4         ?/?         C/T         A/A        C/C        A/A         ?/?
+5         ?/?         T/T         A/A        C/C        A/A         ?/?
+6         ?/?         T/T         A/A        C/C        ?/?         ?/?
+  PZA02959.7 PZA02961.1 PZA02962.13 PZA02963.5 PZA02966.11 PZA02968.4
+1        A/A        C/C         ?/?        ?/?         ?/?        ?/?
+2        A/A        C/C         ?/?        ?/?         ?/?        ?/?
+3        A/A        C/C         A/A        C/C         A/A        ?/?
+4        A/A        C/C         ?/?        C/C         ?/?        ?/?
+5        A/A        C/C         ?/?        ?/?         A/A        C/G
+6        A/A        C/C         A/T        ?/?         A/A        ?/?
+  PZA02969.11 PZA02970.9 PZA02972.1 PZA02982.5 PZA02982.6 PZA02983.38
+1         ?/?        C/C        C/C        C/C        T/T         G/G
+2         ?/?        C/C        ?/?        C/C        T/T         G/G
+3         C/C        A/C        ?/?        C/C        T/T         G/G
+4         C/C        A/C        ?/?        C/C        T/T         G/G
+5         ?/?        C/C        T/T        C/C        T/T         G/G
+6         C/C        ?/?        ?/?        C/C        T/T         G/G
+  PZA02984.7 PZA02988.2 PZA02993.5 PZA02997.16 PZA02997.19 PZA03001.15
+1        ?/?        A/A        ?/?         A/A         C/C         T/T
+2        ?/?        A/A        ?/?         A/A         C/C         T/T
+3        ?/?        A/A        C/C         ?/?         C/C         T/T
+4        ?/?        A/A        C/C         ?/?         C/C         T/T
+5        ?/?        A/A        C/C         A/A         C/C         ?/?
+6        ?/?        A/G        C/C         A/A         C/C         T/T
+  PZA03001.18 PZA03001.9 PZA03009.5 PZA03009.6 PZA03009.7 PZA03009.8 PZA03011.6
+1         ?/?        A/T        C/C        G/G        T/T        A/A        ?/?
+2         ?/?        A/T        C/C        G/G        T/T        A/A        ?/?
+3         ?/?        A/T        C/C        G/G        ?/?        A/A        A/A
+4         ?/?        A/T        C/C        G/G        ?/?        A/A        A/A
+5         ?/?        ?/?        C/C        G/G        T/T        A/A        ?/?
+6         ?/?        A/T        C/C        G/G        T/T        A/A        ?/?
+  PZA03012.10 PZA03013.7 PZA03013.8 PZA03014.10 PZA03014.21 PZA03014.24
+1         C/C        A/A        C/C         C/C         ?/?         C/C
+2         C/C        A/A        C/C         C/C         G/G         C/C
+3         C/C        A/A        C/C         C/C         G/G         C/C
+4         C/C        A/A        C/C         C/C         G/G         C/C
+5         C/C        A/A        C/C         C/C         G/G         C/C
+6         ?/?        A/A        C/C         C/C         G/G         C/C
+  PZA03017.10 PZA03017.11 PZA03024.16 PZA03024.18 PZA03024.7 PZA03028.5
+1         T/T         ?/?         ?/?         T/T        C/C        G/G
+2         T/T         ?/?         ?/?         T/T        C/C        G/G
+3         T/T         ?/?         C/C         T/T        C/C        G/G
+4         T/T         ?/?         C/C         T/T        C/C        G/G
+5         T/T         ?/?         C/C         T/T        C/C        G/G
+6         ?/?         ?/?         C/C         T/T        C/C        G/G
+  PZA03032.16 PZA03034.1 PZA03035.5 PZA03037.8 PZA03037.9 PZA03041.8 PZA03042.1
+1         C/C        C/C        C/C        G/G        T/T        ?/?        ?/?
+2         C/C        C/C        C/C        G/G        T/T        ?/?        ?/?
+3         C/C        C/C        C/C        G/G        T/T        ?/?        G/G
+4         C/C        C/C        C/C        G/G        T/T        ?/?        G/G
+5         ?/?        C/C        C/C        G/G        ?/?        ?/?        G/G
+6         C/C        C/C        C/C        G/G        T/T        ?/?        ?/?
+  PZA03042.5 PZA03046.2 PZA03046.3 PZA03047.12 PZA03047.20 PZA03047.22
+1        G/G        T/T        ?/?         ?/?         ?/?         C/C
+2        G/G        T/T        ?/?         ?/?         A/G         C/C
+3        G/G        T/T        C/C         G/G         A/G         C/C
+4        G/G        T/T        C/C         ?/?         A/G         C/C
+5        G/G        T/T        C/C         G/G         A/G         C/C
+6        G/G        T/T        C/C         G/G         A/A         C/C
+  PZA03048.16 PZA03048.17 PZA03049.23 PZA03051.1 PZA03051.3 PZA03052.15
+1         C/C         ?/?         ?/?        ?/?        ?/?         A/A
+2         C/C         ?/?         ?/?        ?/?        ?/?         ?/?
+3         C/C         T/T         ?/?        G/G        T/T         ?/?
+4         C/C         T/T         ?/?        G/G        T/T         ?/?
+5         C/C         ?/?         G/G        ?/?        ?/?         A/A
+6         C/C         T/T         G/G        ?/?        T/T         A/A
+  PZA03054.3 PZA03054.5 PZA03058.17 PZA03062.15 PZA03062.7 PZA03063.17
+1        ?/?        A/A         ?/?         ?/?        C/C         T/T
+2        ?/?        A/A         ?/?         T/T        C/C         T/T
+3        C/C        A/A         ?/?         T/T        C/C         T/T
+4        C/C        A/A         ?/?         ?/?        C/C         T/T
+5        ?/?        A/A         ?/?         ?/?        C/C         T/T
+6        C/C        A/A         ?/?         ?/?        C/C         T/T
+  PZA03063.18 PZA03064.6 PZA03067.17 PZA03067.20 PZA03068.11 PZA03068.13
+1         C/C        ?/?         ?/?         ?/?         ?/?         ?/?
+2         C/C        ?/?         C/C         ?/?         ?/?         ?/?
+3         C/C        A/A         ?/?         ?/?         G/G         T/T
+4         C/C        ?/?         C/T         ?/?         G/G         T/T
+5         C/C        ?/?         C/C         ?/?         ?/?         ?/?
+6         C/C        A/A         ?/?         ?/?         G/G         T/T
+  PZA03069.6 PZA03073.23 PZA03073.24 PZA03074.24 PZA03078.33 PZA03081.1
+1        C/C         C/C         C/C         C/C         ?/?        C/C
+2        C/C         C/C         C/C         C/C         ?/?        C/C
+3        C/C         C/C         C/C         C/C         ?/?        C/C
+4        C/C         C/C         C/C         C/C         ?/?        C/C
+5        C/C         C/C         ?/?         C/C         ?/?        C/C
+6        ?/?         C/C         C/C         C/C         ?/?        C/C
+  PZA03081.10 PZA03081.11 PZA03081.13 PZA03081.6 PZA03083.7 PZA03089.12
+1         ?/?         G/G         C/C        ?/?        C/C         G/G
+2         ?/?         G/G         C/C        ?/?        C/C         ?/?
+3         G/G         G/G         C/T        ?/?        C/C         G/G
+4         G/G         G/G         C/T        ?/?        C/C         G/G
+5         G/G         G/G         ?/?        ?/?        C/C         G/G
+6         G/G         G/G         ?/?        ?/?        C/C         G/G
+  PZA03090.31 PZA03092.7 PZA03094.18 PZA03094.6 PZA03095.1 PZA03095.2
+1         G/G        ?/?         C/T        T/T        T/T        ?/?
+2         G/G        ?/?         ?/?        T/T        T/T        G/G
+3         G/G        ?/?         ?/?        T/T        T/T        G/G
+4         G/G        ?/?         C/T        T/T        T/T        G/G
+5         G/G        ?/?         C/T        T/T        T/T        G/G
+6         G/G        ?/?         ?/?        T/T        T/T        G/G
+  PZA03095.3 PZA03097.4 PZA03097.7 PZA03097.9 PZA03102.10 PZA03102.2 PZA03102.9
+1        G/G        C/C        ?/?        G/G         ?/?        T/T        C/C
+2        G/G        C/C        ?/?        G/G         ?/?        T/T        C/C
+3        G/G        C/C        ?/?        G/G         ?/?        ?/?        C/C
+4        G/G        C/C        ?/?        G/G         ?/?        ?/?        C/C
+5        G/G        C/C        ?/?        ?/?         ?/?        T/T        ?/?
+6        G/G        C/C        ?/?        G/G         ?/?        T/T        ?/?
+  PZA03137.1 PZA03172.2 PZA03223.3 PZA03258.2 PZA03283.2 PZA03284.3 PZA03290.1
+1        ?/?        A/A        ?/?        C/C        T/T        ?/?        G/G
+2        ?/?        A/A        ?/?        C/C        T/T        ?/?        G/G
+3        C/C        A/A        ?/?        ?/?        T/T        ?/?        G/G
+4        C/C        A/A        ?/?        T/T        ?/?        ?/?        G/G
+5        ?/?        A/A        ?/?        C/T        T/T        ?/?        G/G
+6        ?/?        A/A        ?/?        C/T        T/T        G/G        G/G
+  PZA03290.2 PZA03295.4 PZA03296.6 PZA03296.7 PZA03298.1 PZA03298.2 PZA03301.2
+1        ?/?        C/C        ?/?        ?/?        ?/?        G/G        A/G
+2        ?/?        C/C        ?/?        ?/?        ?/?        ?/?        A/G
+3        ?/?        ?/?        C/C        ?/?        G/G        G/G        ?/?
+4        ?/?        ?/?        C/C        ?/?        G/G        G/G        ?/?
+5        ?/?        ?/?        C/C        ?/?        ?/?        ?/?        G/G
+6        ?/?        ?/?        ?/?        ?/?        G/G        G/G        ?/?
+  PZA03301.4 PZA03302.1 PZA03305.6 PZA03305.7 PZA03311.2 PZA03311.3 PZA03311.4
+1        ?/?        T/T        A/A        C/C        ?/?        C/C        C/C
+2        ?/?        T/T        A/A        C/C        ?/?        C/C        C/C
+3        C/C        T/T        A/A        C/C        ?/?        C/C        C/C
+4        C/C        T/T        A/A        C/C        ?/?        C/C        C/C
+5        C/C        T/T        A/A        C/C        ?/?        C/C        C/C
+6        C/C        T/T        A/A        C/C        C/C        C/C        C/C
+  PZA03311.5 PZA03312.1 PZA03312.2 PZA03316.2 PZA03317.1 PZA03319.3 PZA03319.4
+1        G/G        ?/?        A/A        ?/?        ?/?        ?/?        ?/?
+2        T/T        ?/?        A/A        ?/?        ?/?        ?/?        ?/?
+3        G/G        C/T        A/A        T/T        A/G        ?/?        G/T
+4        G/G        ?/?        A/A        T/T        G/G        ?/?        G/T
+5        G/G        ?/?        A/A        C/T        ?/?        ?/?        ?/?
+6        G/G        ?/?        A/A        T/T        ?/?        ?/?        ?/?
+  PZA03320.3 PZA03320.4 PZA03328.5 PZA03329.1 PZA03329.2 PZA03333.3 PZA03335.2
+1        C/C        ?/?        ?/?        C/C        G/G        ?/?        G/G
+2        C/C        ?/?        ?/?        C/C        G/G        ?/?        G/G
+3        C/C        ?/?        A/A        C/C        G/G        C/C        G/G
+4        C/C        ?/?        A/A        C/C        G/G        C/C        G/G
+5        C/C        ?/?        ?/?        C/C        G/G        ?/?        G/G
+6        C/T        G/G        ?/?        ?/?        G/G        ?/?        G/G
+  PZA03335.3 PZA03337.1 PZA03338.5 PZA03340.2 PZA03342.2 PZA03344.4 PZA03344.5
+1        C/C        ?/?        G/G        G/G        ?/?        T/T        T/T
+2        C/C        ?/?        G/G        ?/?        ?/?        T/T        T/T
+3        C/C        ?/?        G/G        ?/?        ?/?        T/T        ?/?
+4        C/C        ?/?        G/G        ?/?        ?/?        T/T        ?/?
+5        C/C        ?/?        G/G        ?/?        ?/?        T/T        T/T
+6        C/C        ?/?        G/G        ?/?        ?/?        T/T        T/T
+  PZA03344.6 PZA03345.1 PZA03345.2 PZA03345.4 PZA03347.1 PZA03348.1 PZA03349.1
+1        C/C        ?/?        C/C        C/C        G/G        ?/?        ?/?
+2        C/C        ?/?        C/C        C/C        G/G        ?/?        ?/?
+3        ?/?        C/C        C/C        C/C        G/G        ?/?        A/A
+4        C/C        ?/?        C/C        C/C        G/G        A/A        A/A
+5        C/C        C/C        C/C        C/C        G/G        ?/?        ?/?
+6        C/C        ?/?        ?/?        C/C        G/G        ?/?        ?/?
+  PZA03349.9 PZA03767.1 PZA03767.4 PZA03767.5 PZA03773.2 PZA03773.3 PZA03774.1
+1        C/C        ?/?        ?/?        C/C        C/C        ?/?        ?/?
+2        C/C        ?/?        ?/?        C/C        C/C        ?/?        ?/?
+3        C/C        T/T        ?/?        C/C        C/C        ?/?        G/G
+4        C/C        T/T        ?/?        C/C        C/C        ?/?        G/G
+5        C/C        ?/?        ?/?        C/C        C/C        ?/?        ?/?
+6        ?/?        ?/?        ?/?        C/C        ?/?        ?/?        ?/?
+  PZA03774.10 PZA03774.2 PZA03774.4 PZA03774.5 PZA03774.6 PZA03774.8 PZA03774.9
+1         G/G        ?/?        ?/?        C/C        C/C        T/T        G/G
+2         G/G        ?/?        ?/?        C/C        C/C        T/T        G/G
+3         G/G        T/T        ?/?        ?/?        C/C        T/T        G/G
+4         G/G        T/T        ?/?        ?/?        C/C        T/T        G/G
+5         G/G        ?/?        ?/?        C/C        C/C        T/T        G/G
+6         G/G        ?/?        ?/?        ?/?        C/C        T/T        G/G
+  PZA03775.1 PZA03775.11 PZA03775.2 PZA03775.3 PZA03775.4 PZA03775.6 PZA03775.7
+1        A/A         T/T        G/G        T/T        T/T        A/A        T/T
+2        A/A         T/T        G/G        T/T        T/T        A/A        T/T
+3        A/A         T/T        G/G        T/T        T/T        A/A        T/T
+4        A/A         T/T        G/G        T/T        T/T        A/A        T/T
+5        A/A         T/T        ?/?        T/T        T/T        A/A        T/T
+6        A/A         T/T        G/G        T/T        ?/?        A/A        T/T
+  PZA03775.8 PZA03775.9 PZA03781.1 PZA03781.2 PZA03781.3 PZA03781.4 PZA03781.5
+1        G/G        C/C        C/C        C/C        ?/?        A/A        C/C
+2        G/G        C/C        C/C        C/C        ?/?        A/A        C/C
+3        G/G        C/C        C/T        C/C        C/C        C/C        C/C
+4        G/G        C/C        C/T        C/C        C/C        C/C        C/C
+5        G/G        C/C        C/C        C/C        C/C        C/C        C/C
+6        G/G        C/C        C/C        ?/?        ?/?        ?/?        C/C
+  PZA03781.6 PZA03781.7 PZA03781.8 PZA03782.1 PZA03782.3 PZA03786.1 PZA03786.2
+1        ?/?        C/C        ?/?        T/T        ?/?        A/A        ?/?
+2        ?/?        C/C        ?/?        T/T        ?/?        A/A        ?/?
+3        A/A        C/C        A/A        G/G        ?/?        A/A        ?/?
+4        A/A        C/C        A/A        G/G        ?/?        A/A        ?/?
+5        A/A        T/T        A/A        T/T        ?/?        A/A        ?/?
+6        ?/?        ?/?        ?/?        G/G        ?/?        ?/?        ?/?
+  PZA03789.1 PZA03789.2 PZA03789.4 PZB00011.4 PZB00011.5 PZB00041.2 PZB00041.4
+1        C/C        G/T        ?/?        ?/?        ?/?        C/C        A/A
+2        C/C        G/T        ?/?        ?/?        ?/?        C/C        ?/?
+3        C/C        ?/?        G/G        T/T        ?/?        C/C        A/A
+4        C/C        G/G        G/G        T/T        ?/?        C/C        A/A
+5        C/C        ?/?        G/G        ?/?        ?/?        C/C        ?/?
+6        C/C        G/G        G/G        T/T        ?/?        C/C        A/A
+  PZB00049.2 PZB00049.4 PZB00049.7 PZB00055.1 PZB00060.4 PZB00062.6 PZB00062.7
+1        ?/?        G/G        C/C        C/C        G/G        C/C        ?/?
+2        ?/?        G/G        ?/?        C/C        G/G        C/C        ?/?
+3        A/A        G/G        C/T        C/C        G/G        C/C        ?/?
+4        A/G        G/G        C/T        C/C        G/G        C/C        ?/?
+5        G/G        G/G        T/T        C/C        G/G        C/C        ?/?
+6        A/A        G/G        C/C        C/C        A/G        C/C        ?/?
+  PZB00062.8 PZB00067.2 PZB00067.3 PZB00067.4 PZB00067.5 PZB00078.1 PZB00081.2
+1        T/T        G/G        ?/?        C/C        ?/?        G/G        T/T
+2        T/T        G/G        ?/?        C/C        A/A        G/G        T/T
+3        ?/?        A/G        ?/?        ?/?        ?/?        G/G        T/T
+4        T/T        A/G        ?/?        ?/?        ?/?        G/G        T/T
+5        T/T        G/G        ?/?        C/C        ?/?        G/G        T/T
+6        T/T        G/G        ?/?        C/C        ?/?        G/G        T/T
+  PZB00081.4 PZB00081.5 PZB00081.7 PZB00092.1 PZB00092.4 PZB00093.3 PZB00093.4
+1        A/A        A/A        C/C        A/A        C/C        G/G        C/C
+2        A/A        A/A        C/C        ?/?        C/C        G/G        C/C
+3        A/A        A/A        C/C        A/A        C/C        G/G        C/G
+4        A/A        A/A        C/C        A/A        C/C        G/G        C/G
+5        A/A        A/A        C/C        ?/?        C/C        G/G        C/C
+6        G/G        A/A        C/C        ?/?        C/C        ?/?        C/C
+  PZB00093.6 PZB00096.2 PZB00096.3 PZB00136.3 PZB00140.1 PZB00145.2 PZB00149.2
+1        ?/?        C/C        C/C        A/A        ?/?        T/T        G/G
+2        ?/?        C/C        C/C        A/A        ?/?        T/T        G/G
+3        ?/?        C/C        ?/?        A/A        T/T        T/T        ?/?
+4        ?/?        C/C        ?/?        A/A        T/T        T/T        ?/?
+5        ?/?        C/C        C/C        A/A        ?/?        T/T        A/G
+6        ?/?        C/C        C/C        A/A        ?/?        T/T        ?/?
+  PZB00149.4 PZB00153.1 PZB00153.2 PZB00153.3 PZB00153.5 PZB00160.1 PZB00160.2
+1        T/T        T/T        C/C        G/G        A/A        C/C        C/C
+2        T/T        T/T        C/C        G/G        A/A        C/C        C/C
+3        T/T        ?/?        C/C        G/G        A/A        ?/?        C/C
+4        T/T        ?/?        C/C        G/G        A/A        ?/?        C/C
+5        T/T        T/T        C/C        G/G        A/A        C/C        C/C
+6        T/T        T/T        C/C        G/G        A/A        C/C        C/C
+  PZB00160.4 PZB00165.2 PZB00165.6 PZB00169.4 PZB00169.6 PZB00175.1 PZB00175.2
+1        T/T        T/T        G/G        C/C        ?/?        G/G        ?/?
+2        T/T        T/T        G/G        C/C        ?/?        G/G        ?/?
+3        T/T        T/T        A/A        ?/?        ?/?        G/G        ?/?
+4        T/T        T/T        A/A        ?/?        ?/?        G/G        ?/?
+5        T/T        T/T        G/G        ?/?        ?/?        G/G        ?/?
+6        T/T        T/T        A/A        ?/?        ?/?        G/G        ?/?
+  PZB00175.3 PZB00175.4 PZB00175.5 PZB00180.1 PZB00180.2 PZB00183.3 PZB00188.6
+1        G/G        ?/?        G/G        T/T        G/G        ?/?        G/G
+2        G/G        ?/?        G/G        T/T        G/G        ?/?        G/G
+3        G/G        C/C        G/G        T/T        G/G        ?/?        A/G
+4        G/G        C/C        G/G        T/T        G/G        ?/?        A/G
+5        G/G        C/C        G/G        T/T        G/G        ?/?        G/G
+6        G/G        C/C        G/G        T/T        G/G        ?/?        A/A
+  PZB00207.3 PZB00221.3 PZB00221.8 PZB00229.3 PZB00232.1 PZB00232.2 PZB00232.4
+1        ?/?        ?/?        ?/?        ?/?        ?/?        ?/?        G/G
+2        ?/?        ?/?        ?/?        ?/?        ?/?        ?/?        G/G
+3        T/T        ?/?        ?/?        G/G        ?/?        ?/?        A/G
+4        T/T        ?/?        ?/?        G/G        ?/?        ?/?        A/G
+5        ?/?        ?/?        ?/?        ?/?        ?/?        ?/?        G/G
+6        ?/?        ?/?        ?/?        ?/?        ?/?        ?/?        G/G
+  PZB00232.5 PZB00379.3 PZB00379.4 PZB00379.5 PZB00393.7 PZB00409.3 PZB00416.2
+1        ?/?        G/G        C/C        C/C        T/T        ?/?        G/G
+2        ?/?        G/G        C/C        C/C        T/T        ?/?        G/G
+3        ?/?        G/G        C/C        C/C        T/T        G/G        G/G
+4        ?/?        G/G        C/C        C/C        T/T        G/G        ?/?
+5        ?/?        G/G        C/C        C/C        T/T        G/G        G/G
+6        ?/?        G/G        C/C        C/C        T/T        ?/?        G/G
+  PZB00416.5 PZB00454.2 PZB00454.3 PZB00454.4 PZB00454.5 PZB00498.2 PZB00498.4
+1        C/C        T/T        C/C        A/A        G/G        C/C        G/G
+2        C/C        T/T        C/C        A/A        G/G        C/C        G/G
+3        C/C        T/T        C/C        ?/?        G/G        ?/?        G/G
+4        C/C        T/T        C/C        ?/?        G/G        C/C        G/G
+5        C/C        T/T        C/C        A/A        G/G        C/C        G/G
+6        C/C        T/T        C/C        A/A        G/G        C/C        G/G
+  PZB00598.1 PZB00598.2 PZB00603.3 PZB00603.4 PZB00603.5 PZB00607.2 PZB00761.1
+1        ?/?        A/A        C/C        C/C        ?/?        ?/?        T/T
+2        ?/?        A/A        C/C        C/C        ?/?        ?/?        T/T
+3        C/C        A/A        C/C        C/C        ?/?        ?/?        T/T
+4        C/C        A/A        C/C        C/C        ?/?        ?/?        T/T
+5        ?/?        A/A        C/C        C/C        ?/?        ?/?        T/T
+6        C/C        A/A        ?/?        ?/?        ?/?        G/G        T/T
+  PZB00761.2 PZB00849.2 PZB00849.3 PZB00849.4 PZB00859.1 PZB01109.2 PZB01109.3
+1        C/G        G/G        C/C        G/G        C/C        A/A        G/G
+2        C/G        G/G        C/C        G/G        C/C        A/A        G/G
+3        ?/?        G/G        C/C        ?/?        C/C        A/A        G/G
+4        G/G        G/G        C/C        ?/?        C/C        A/A        G/G
+5        C/G        G/G        C/C        G/G        C/C        A/A        G/G
+6        G/G        G/G        C/C        G/G        ?/?        A/A        ?/?
+  PZB01110.1 PZB01110.2 PZB01110.3 PZB01111.6 PZB01111.7 PZB01111.8 PZB01112.3
+1        G/G        C/C        ?/?        ?/?        G/G        C/C        G/G
+2        G/G        C/C        ?/?        ?/?        G/G        C/C        G/G
+3        G/G        C/C        C/C        C/C        G/G        ?/?        G/G
+4        G/G        C/C        C/C        C/C        G/G        C/C        G/G
+5        G/G        C/C        ?/?        C/C        G/G        ?/?        G/G
+6        G/G        C/C        C/C        C/C        G/G        C/C        G/G
+  PZB01112.4 PZB01112.5 PZB01112.6 PZB01113.4 PZB01114.1 PZB01114.3 PZB01115.1
+1        G/G        ?/?        ?/?        G/G        ?/?        C/C        A/A
+2        G/G        ?/?        ?/?        G/G        ?/?        C/C        A/A
+3        G/G        ?/?        G/G        G/G        ?/?        C/C        A/A
+4        G/G        ?/?        G/G        G/G        ?/?        C/C        A/A
+5        G/G        ?/?        ?/?        G/G        ?/?        C/C        A/A
+6        G/G        ?/?        ?/?        G/G        ?/?        ?/?        A/A
+  PZB01115.5 PZB01115.6 PZB01116.2 PZB01221.1 PZB01222.1 PZB01222.3 PZB01223.3
+1        ?/?        C/C        C/C        C/C        ?/?        C/C        G/G
+2        C/C        C/C        C/C        C/C        ?/?        C/T        G/G
+3        C/C        C/T        C/C        C/C        ?/?        ?/?        G/G
+4        C/C        C/C        C/C        C/C        ?/?        C/C        G/G
+5        C/C        C/C        C/C        C/C        ?/?        C/C        G/G
+6        ?/?        C/C        C/C        C/C        ?/?        ?/?        ?/?
+  PZB01223.4 PZB01223.7 PZB01225.1 PZB01225.2 PZB01225.4 PZB01228.1 PZB01228.3
+1        C/C        C/G        A/A        G/G        G/G        A/A        ?/?
+2        C/C        C/G        A/A        G/G        ?/?        A/A        ?/?
+3        C/C        C/G        A/G        G/G        ?/?        A/A        A/A
+4        C/C        C/G        ?/?        G/G        ?/?        A/A        A/G
+5        C/C        C/G        A/A        G/G        ?/?        ?/?        ?/?
+6        C/C        C/C        A/A        G/G        ?/?        A/A        ?/?
+  PZB01228.4 PZB01233.2 PZB01233.3 PZB01238.5 PZB01238.6 PZB01427.1 PZB01427.3
+1        ?/?        ?/?        G/G        C/C        ?/?        G/G        ?/?
+2        ?/?        ?/?        G/G        C/C        ?/?        G/G        ?/?
+3        T/T        ?/?        G/G        C/G        C/C        ?/?        ?/?
+4        T/T        ?/?        G/G        C/C        C/C        ?/?        ?/?
+5        ?/?        ?/?        G/G        C/C        ?/?        G/G        ?/?
+6        ?/?        ?/?        G/G        C/C        ?/?        G/G        ?/?
+  PZB01463.2 PZB01463.3 PZB01463.4 PZD00003.1 PZD00003.3 PZD00007.1 PZD00008.3
+1        A/A        G/G        G/G        C/C        C/C        ?/?        G/G
+2        A/A        G/G        G/G        C/C        C/C        ?/?        G/G
+3        A/G        G/G        G/G        C/C        C/C        ?/?        G/G
+4        A/G        G/G        G/G        C/C        C/C        ?/?        G/G
+5        A/A        G/G        G/G        C/C        C/C        ?/?        G/G
+6        A/A        G/G        G/G        C/C        C/C        ?/?        G/G
+  PZD00011.1 PZD00011.3 PZD00011.4 PZD00012.1 PZD00012.2 PZD00012.3 PZD00012.4
+1        ?/?        ?/?        ?/?        ?/?        C/C        A/A        A/A
+2        ?/?        ?/?        ?/?        ?/?        C/C        A/A        A/A
+3        G/G        ?/?        ?/?        ?/?        ?/?        A/A        A/A
+4        G/G        ?/?        ?/?        ?/?        A/C        A/A        A/A
+5        ?/?        ?/?        ?/?        ?/?        C/C        A/A        A/A
+6        G/G        ?/?        ?/?        ?/?        C/C        ?/?        ?/?
+  PZD00012.5 PZD00013.3 PZD00013.4 PZD00014.3 PZD00017.1 PZD00019.1 PZD00020.2
+1        A/A        ?/?        ?/?        C/C        T/T        ?/?        ?/?
+2        A/G        ?/?        ?/?        C/C        T/T        ?/?        ?/?
+3        ?/?        T/T        ?/?        C/C        T/T        ?/?        ?/?
+4        ?/?        T/T        ?/?        C/C        T/T        ?/?        ?/?
+5        ?/?        T/T        ?/?        C/C        T/T        ?/?        ?/?
+6        A/G        T/T        ?/?        C/C        T/T        ?/?        ?/?
+  PZD00020.3 PZD00020.4 PZD00020.6 PZD00021.2 PZD00021.4 PZD00021.5 PZD00022.1
+1        ?/?        G/G        ?/?        ?/?        G/G        ?/?        C/C
+2        ?/?        G/G        ?/?        ?/?        G/G        ?/?        C/C
+3        ?/?        G/G        ?/?        ?/?        G/G        ?/?        ?/?
+4        ?/?        G/G        ?/?        C/C        ?/?        ?/?        ?/?
+5        ?/?        G/G        ?/?        ?/?        G/G        ?/?        C/C
+6        ?/?        G/G        ?/?        ?/?        ?/?        T/T        C/C
+  PZD00022.3 PZD00022.4 PZD00024.2 PZD00025.1 PZD00025.2 PZD00030.1 PZD00030.4
+1        C/C        C/C        C/C        T/T        C/C        ?/?        T/T
+2        C/C        C/C        C/C        T/T        C/C        ?/?        T/T
+3        C/C        C/C        C/C        T/T        C/C        T/T        T/T
+4        C/C        C/C        C/C        T/T        C/C        T/T        T/T
+5        C/C        C/C        C/C        T/T        C/C        ?/?        T/T
+6        C/C        C/C        C/C        T/T        C/C        ?/?        T/T
+  PZD00030.5 PZD00030.6 PZD00034.3 PZD00043.1 PZD00043.2 PZD00043.3 PZD00043.4
+1        ?/?        C/C        ?/?        C/C        C/C        C/C        ?/?
+2        ?/?        C/C        ?/?        C/C        ?/?        C/C        ?/?
+3        A/A        C/C        ?/?        C/C        ?/?        C/C        T/T
+4        ?/?        ?/?        ?/?        C/C        ?/?        C/C        T/T
+5        A/A        C/C        ?/?        C/C        ?/?        C/C        T/T
+6        A/A        C/C        ?/?        ?/?        C/C        C/C        ?/?
+  PZD00044.2 PZD00044.3 PZD00044.4 PZD00045.1 PZD00045.2 PZD00045.3 PZD00045.4
+1        ?/?        ?/?        C/C        T/T        ?/?        ?/?        A/A
+2        ?/?        ?/?        C/C        T/T        ?/?        ?/?        A/A
+3        G/G        ?/?        C/C        A/A        G/G        ?/?        A/A
+4        G/G        ?/?        ?/?        A/A        G/G        ?/?        A/A
+5        G/G        ?/?        C/C        A/A        ?/?        ?/?        A/A
+6        G/G        ?/?        C/C        A/A        G/G        ?/?        A/A
+  PZD00049.3 PZD00049.4 PZD00049.5 PZD00051.1 PZD00052.3 PZD00052.4 PZD00062.2
+1        G/G        G/G        ?/?        A/A        ?/?        G/G        ?/?
+2        G/G        G/G        ?/?        A/A        ?/?        G/G        ?/?
+3        G/G        G/G        ?/?        A/A        ?/?        G/G        ?/?
+4        G/G        G/G        ?/?        A/A        ?/?        G/G        ?/?
+5        G/G        G/G        ?/?        A/A        ?/?        G/G        ?/?
+6        G/G        G/G        ?/?        ?/?        ?/?        G/G        ?/?
+  PZD00066.1 PZD00067.1 PZD00067.2 PZD00067.3 PZD00068.1 PZD00069.2 PZD00069.3
+1        C/C        G/G        ?/?        A/G        G/G        G/G        ?/?
+2        C/C        G/G        A/A        A/G        G/G        G/G        ?/?
+3        C/G        G/G        ?/?        A/G        G/G        G/G        ?/?
+4        ?/?        G/G        A/A        A/G        G/G        G/G        C/C
+5        C/C        G/G        A/A        A/G        G/G        G/G        ?/?
+6        G/G        G/G        A/A        ?/?        G/G        ?/?        C/C
+  PZD00069.4 PZD00069.5 PZD00073.1 PZD00073.2 PZD00073.6 PZD00074.1 PZD00075.1
+1        C/C        A/G        C/C        A/A        C/C        C/C        ?/?
+2        C/C        G/G        C/C        A/A        C/C        C/C        ?/?
+3        C/C        G/G        ?/?        A/A        C/C        C/G        ?/?
+4        C/C        G/G        ?/?        A/A        C/C        C/G        ?/?
+5        ?/?        G/G        C/C        A/A        C/C        C/C        ?/?
+6        C/C        A/A        C/C        A/A        C/C        C/C        ?/?
+  PZD00075.2 PZD00076.1 PZD00076.2 PZD00076.4 PZD00077.10 PZD00077.5 PZD00077.7
+1        C/C        A/A        ?/?        T/T         ?/?        ?/?        ?/?
+2        C/C        A/A        ?/?        T/T         ?/?        ?/?        ?/?
+3        C/C        A/A        A/A        T/T         ?/?        T/T        ?/?
+4        C/C        ?/?        A/A        T/T         ?/?        ?/?        ?/?
+5        C/C        A/A        ?/?        T/T         ?/?        ?/?        ?/?
+6        C/C        A/A        ?/?        T/T         ?/?        ?/?        ?/?
+  PZD00077.8 PZD00078.2 Ra2_ORF.1 Ra2_ORF.2 Ra2_ORF.4 Ra2_promoter.1
+1        ?/?        T/T       C/C       C/C       ?/?            A/A
+2        G/G        T/T       C/C       C/C       A/A            A/A
+3        G/G        T/T       C/C       C/C       A/G            A/A
+4        G/G        T/T       C/C       C/C       A/G            A/A
+5        G/G        T/T       C/C       C/C       A/A            A/A
+6        G/G        T/T       C/C       C/C       A/A            ?/?
+  Ra2_promoter.2 Ra2_promoter.3 sh2.5 sh2.6 sh2.7 sh2.9 su1.4 su1.5 su1.7
+1            ?/?            T/T   T/T   G/G   ?/?   A/A   ?/?   ?/?   ?/?
+2            ?/?            T/T   T/T   G/G   ?/?   A/A   G/G   ?/?   ?/?
+3            A/C            T/T   T/T   G/G   G/G   A/A   ?/?   ?/?   C/C
+4            ?/?            ?/?   T/T   G/G   G/G   A/A   G/T   ?/?   C/C
+5            A/C            T/T   T/T   G/G   ?/?   A/A   ?/?   ?/?   ?/?
+6            ?/?            ?/?   T/T   G/G   ?/?   ?/?   ?/?   ?/?   ?/?
+  tb1.17 tb1.18 tb1.19 tb1.5 te1.3 te1.4 zagl1.1 zagl1.6 zap1.2 zen1.1 zen1.2
+1    T/T    G/G    ?/?   T/T   G/G   G/G     C/C     C/C    A/A    ?/?    ?/?
+2    T/T    G/G    ?/?   ?/?   G/G   G/G     C/C     C/C    A/A    ?/?    ?/?
+3    C/T    G/T    ?/?   ?/?   G/G   G/G     C/C     C/C    A/A    ?/?    A/A
+4    C/T    G/T    ?/?   ?/?   ?/?   G/G     A/C     C/C    A/A    ?/?    A/A
+5    T/T    G/G    C/C   ?/?   G/G   G/G     ?/?     C/C    A/A    ?/?    A/G
+6    T/T    G/G    C/C   ?/?   G/G   G/G     A/C     C/C    A/A    ?/?    A/A
+  zen1.4 zfl2.6 zmm3.4
+1    ?/?    G/G    T/T
+2    ?/?    G/G    T/T
+3    ?/?    G/G    T/T
+4    ?/?    G/G    T/T
+5    ?/?    ?/?    T/T
+6    ?/?    G/G    T/T</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(snp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    SNP_ID cdv_marker_id Chromosome  Position alt_pos mult_positions amplicon
+1 abph1.20          5976          2  27403404   abph1       AB042260    abph1
+2 abph1.22          5978          2  27403892   abph1       AB042260    abph1
+3    ae1.3          6605          5 167889790     ae1            ae1      ae1
+4    ae1.4          6606          5 167889682     ae1            ae1      ae1
+5    ae1.5          6607          5 167889821     ae1            ae1      ae1
+6    an1.4          5982          1 240498509     an1            an1      an1
+  cdv_map_feature.name gene candidate.random Genaissance_daa_id Sequenom_daa_id
+1            candidate 8393            10474                  1               1
+2            candidate 8394            10475                  0               0
+3            candidate 8395            10477                  1               1
+4            candidate 8396            10478                  0               0
+5            candidate 8397            10479                  0               0
+6            candidate 8398            10481                  1               1
+  count_amplicons count_cmf count_gene
+1               1                     
+2               0                     
+3               1                     
+4               0                     
+5               0                     
+6               1                     </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(fang)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "data.frame"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(snp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "data.frame"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(fang)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   2782 obs. of  986 variables:
+ $ Sample_ID     : chr  "SL-15" "SL-16" "SL-11" "SL-12" ...
+ $ JG_OTU        : chr  "T-aust-1" "T-aust-2" "T-brav-1" "T-brav-2" ...
+ $ Group         : chr  "TRIPS" "TRIPS" "TRIPS" "TRIPS" ...
+ $ abph1.20      : chr  "?/?" "?/?" "?/?" "?/?" ...
+ $ abph1.22      : chr  "?/?" "?/?" "?/?" "?/?" ...
+ $ ae1.3         : chr  "T/T" "T/T" "T/T" "T/T" ...
+ $ ae1.4         : chr  "G/G" "?/?" "G/G" "G/G" ...
+ $ ae1.5         : chr  "T/T" "T/T" "T/T" "T/T" ...
+ $ an1.4         : chr  "C/C" "C/C" "?/?" "C/C" ...
+ $ ba1.6         : chr  "?/?" "A/G" "G/G" "G/G" ...
+ $ ba1.9         : chr  "G/G" "G/G" "G/G" "G/G" ...
+ $ bt2.5         : chr  "?/?" "?/?" "C/C" "C/C" ...
+ $ bt2.7         : chr  "A/A" "A/A" "A/A" "A/A" ...
+ $ bt2.8         : chr  "?/?" "?/?" "?/?" "?/?" ...
+ $ Fea2.1        : chr  "C/C" "C/C" "?/?" "?/?" ...
+ $ Fea2.5        : chr  "A/A" "A/A" "A/A" "A/A" ...
+ $ id1.3         : chr  "T/T" "T/T" "T/T" "T/T" ...
+ $ lg2.11        : chr  "C/C" "C/C" "C/C" "C/C" ...
+ $ lg2.2         : chr  "A/A" "A/A" "A/A" "A/A" ...
+ $ pbf1.1        : chr  "?/?" "T/T" "T/T" "T/T" ...
+ $ pbf1.2        : chr  "?/?" "?/?" "?/?" "?/?" ...
+ $ pbf1.3        : chr  "?/?" "?/?" "?/?" "?/?" ...
+ $ pbf1.5        : chr  "?/?" "?/?" "A/A" "A/A" ...
+ $ pbf1.6        : chr  "?/?" "?/?" "?/?" "?/?" ...
+ $ pbf1.7        : chr  "C/C" "C/C" "C/C" "C/C" ...
+ $ pbf1.8        : chr  "C/C" "C/C" "C/C" "C/C" ...
+ $ PZA00003.11   : chr  "?/?" "?/?" "C/C" "?/?" ...
+ $ PZA00004.2    : chr  "T/T" "T/T" "?/?" "T/T" ...
+ $ PZA00005.8    : chr  "G/G" "G/G" "G/G" "G/G" ...
+ $ PZA00005.9    : chr  "C/C" "C/C" "C/C" "C/C" ...
+ $ PZA00006.13   : chr  "A/A" "A/A" "A/A" "A/A" ...
+ $ PZA00006.14   : chr  "?/?" "G/G" "G/G" "G/G" ...
+ $ PZA00008.1    : chr  "C/C" "C/C" "C/C" "C/C" ...
+ $ PZA00010.5    : chr  "C/C" "C/C" "C/C" "C/C" ...
+ $ PZA00013.10   : chr  "A/A" "A/A" "A/A" "A/A" ...
+ $ PZA00013.11   : chr  "C/C" "C/C" "C/T" "C/T" ...
+ $ PZA00013.9    : chr  "T/T" "T/T" "T/T" "T/T" ...
+ $ PZA00015.4    : chr  "?/?" "?/?" "?/?" "?/?" ...
+ $ PZA00017.1    : chr  "G/G" "G/G" "G/G" "G/G" ...
+ $ PZA00018.5    : chr  "C/C" "C/C" "C/C" "C/C" ...
+ $ PZA00029.11   : chr  "C/C" "C/C" "C/C" "C/C" ...
+ $ PZA00029.12   : chr  "T/T" "T/T" "T/T" "T/T" ...
+ $ PZA00030.11   : chr  "?/?" "?/?" "?/?" "?/?" ...
+ $ PZA00031.5    : chr  "C/C" "C/C" "C/C" "C/C" ...
+ $ PZA00041.3    : chr  "?/?" "?/?" "?/?" "?/?" ...
+ $ PZA00042.2    : chr  "?/?" "T/T" "?/?" "?/?" ...
+ $ PZA00042.5    : chr  "C/C" "C/C" "C/C" "C/C" ...
+ $ PZA00043.7    : chr  "T/T" "T/T" "T/T" "T/T" ...
+ $ PZA00045.1    : chr  "G/G" "G/G" "G/G" "G/G" ...
+ $ PZA00047.2    : chr  "C/C" "C/C" "C/C" "C/C" ...
+ $ PZA00049.12   : chr  "?/?" "?/?" "T/T" "T/T" ...
+ $ PZA00050.9    : chr  "A/A" "A/A" "?/?" "?/?" ...
+ $ PZA00051.2    : chr  "A/A" "A/A" "A/A" "A/A" ...
+ $ PZA00058.5    : chr  "?/?" "?/?" "?/?" "?/?" ...
+ $ PZA00058.6    : chr  "T/T" "?/?" "T/T" "T/T" ...
+ $ PZA00060.2    : chr  "?/?" "?/?" "C/C" "C/C" ...
+ $ PZA00061.1    : chr  "?/?" "?/?" "?/?" "?/?" ...
+ $ PZA00065.2    : chr  "C/C" "C/C" "C/C" "C/C" ...
+ $ PZA00069.4    : chr  "C/C" "C/C" "C/C" "C/C" ...
+ $ PZA00070.5    : chr  "C/C" "C/C" "C/C" "C/C" ...
+ $ PZA00078.2    : chr  "C/C" "C/C" "C/C" "C/C" ...
+ $ PZA00079.1    : chr  "C/C" "?/?" "C/C" "C/C" ...
+ $ PZA00081.17   : chr  "?/?" "T/T" "T/T" "T/T" ...
+ $ PZA00084.2    : chr  "C/C" "C/C" "C/C" "C/C" ...
+ $ PZA00084.3    : chr  "T/T" "T/T" "T/T" "T/T" ...
+ $ PZA00086.8    : chr  "?/?" "?/?" "?/?" "?/?" ...
+ $ PZA00088.3    : chr  "G/G" "G/G" "G/G" "G/G" ...
+ $ PZA00090.2    : chr  "A/A" "A/A" "?/?" "?/?" ...
+ $ PZA00092.1    : chr  "?/?" "?/?" "T/T" "?/?" ...
+ $ PZA00092.5    : chr  "?/?" "C/C" "C/C" "?/?" ...
+ $ PZA00093.2    : chr  "?/?" "?/?" "?/?" "?/?" ...
+ $ PZA00096.26   : chr  "T/T" "T/T" "T/T" "T/T" ...
+ $ PZA00097.13   : chr  "G/G" "G/G" "G/G" "G/G" ...
+ $ PZA00098.14   : chr  "?/?" "?/?" "C/C" "?/?" ...
+ $ PZA00100.10   : chr  "?/?" "?/?" "?/?" "?/?" ...
+ $ PZA00100.12   : chr  "T/T" "?/?" "T/T" "T/T" ...
+ $ PZA00100.14   : chr  "?/?" "A/A" "A/A" "A/A" ...
+ $ PZA00100.9    : chr  "C/C" "C/C" "C/C" "?/?" ...
+ $ PZA00103.20   : chr  "A/A" "A/A" "A/A" "A/A" ...
+ $ PZA00106.9    : chr  "G/G" "G/G" "G/G" "G/G" ...
+ $ PZA00107.18   : chr  "?/?" "?/?" "?/?" "?/?" ...
+ $ PZA00108.12   : chr  "?/?" "C/C" "C/C" "C/C" ...
+ $ PZA00108.14   : chr  "G/G" "G/G" "G/G" "G/G" ...
+ $ PZA00108.15   : chr  "A/A" "A/A" "A/A" "A/A" ...
+ $ PZA00109.3    : chr  "A/A" "A/A" "?/?" "?/?" ...
+ $ PZA00109.5    : chr  "A/A" "?/?" "A/A" "?/?" ...
+ $ PZA00111.2    : chr  "T/T" "T/T" "T/T" "T/T" ...
+ $ PZA00111.4    : chr  "C/C" "?/?" "C/C" "C/C" ...
+ $ PZA00111.5    : chr  "?/?" "?/?" "A/A" "A/A" ...
+ $ PZA00111.6    : chr  "C/C" "C/C" "C/C" "C/C" ...
+ $ PZA00111.8    : chr  "T/T" "T/T" "T/T" "T/T" ...
+ $ PZA00114.3    : chr  "C/C" "C/C" "C/C" "C/C" ...
+ $ PZA00116.2    : chr  "C/T" "C/T" "C/T" "C/T" ...
+ $ PZA00119.4    : chr  "G/G" "G/G" "G/G" "G/G" ...
+ $ PZA00120.4    : chr  "G/G" "G/G" "G/G" "G/G" ...
+ $ PZA00123.1    : chr  "?/?" "?/?" "?/?" "?/?" ...
+ $ PZA00125.2    : chr  "?/?" "?/?" "?/?" "?/?" ...
+ $ PZA00131.14   : chr  "C/C" "C/C" "C/C" "C/C" ...
+ $ PZA00132.17   : chr  "T/T" "T/T" "T/T" "T/T" ...
+  [list output truncated]</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(snp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "data.frame"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">object.size</span>(fang)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>22681376 bytes</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">object.size</span>(snp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>525592 bytes</code></pre>
+</div>
+</div>
+<p><strong>Data Processing</strong></p>
+<p>This code creates a column for each identified group of interest, called Category, labeling Maize or Teosinte</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>fang_grouped <span class="ot">&lt;-</span> fang <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">Category=</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>                                  <span class="fu">case_when</span>(Group <span class="sc">==</span> <span class="st">"ZMMIL"</span> <span class="sc">~</span> <span class="st">"Maize"</span>,</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>                                            Group <span class="sc">==</span> <span class="st">"ZMMLR"</span> <span class="sc">~</span> <span class="st">"Maize"</span>,</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>                                            Group <span class="sc">==</span> <span class="st">"ZMMMR"</span> <span class="sc">~</span> <span class="st">"Maize"</span>,</span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>                                            Group <span class="sc">==</span> <span class="st">"ZMPBA"</span> <span class="sc">~</span> <span class="st">"Teosinte"</span>,</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>                                            Group <span class="sc">==</span> <span class="st">"ZMPIL"</span> <span class="sc">~</span> <span class="st">"Teosinte"</span>,</span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>                                            Group <span class="sc">==</span> <span class="st">"ZMPJA"</span> <span class="sc">~</span> <span class="st">"Teosinte"</span>)</span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>                                )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This code transposes a file and moves the rownames to its own column, while joining the two files together and keeping the data aligned.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>fang_grouped <span class="ot">&lt;-</span> fang_grouped <span class="sc">%&gt;%</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Category <span class="sc">==</span><span class="st">"Maize"</span> <span class="sc">|</span> Category <span class="sc">==</span> <span class="st">"Teosinte"</span>)</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>transposef <span class="ot">&lt;-</span><span class="fu">t</span>(fang_grouped)</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="co">#separate group titles</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>fang_titles <span class="ot">&lt;-</span> transposef[<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">987</span>),] <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>()</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="co">#identify data</span></span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>fang_numbers <span class="ot">&lt;-</span> transposef[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">987</span>),] <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>()</span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>fang_numbers<span class="sc">$</span>SNP_ID <span class="ot">&lt;-</span> <span class="fu">rownames</span>(fang_numbers)</span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a><span class="co">#merge numbers by SNP_ID</span></span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a>f_numbers_snp <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">inner_join</span>(snp, fang_numbers, <span class="at">by =</span> <span class="st">"SNP_ID"</span>)</span>
+<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a><span class="co">#bind with group titles/identifiers</span></span>
+<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a>all_data <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(fang_titles, f_numbers_snp)  <span class="sc">%&gt;%</span>  <span class="fu">t</span>() <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This code creates data frames for Chromosome, Position, and Category data.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>maize1_snp <span class="ot">&lt;-</span> all_data <span class="sc">%&gt;%</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(Category <span class="sc">==</span> <span class="st">"Maize"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rbind</span>(all_data[<span class="fu">c</span>(<span class="st">"Chromosome"</span>, <span class="st">"Position"</span>),]) <span class="sc">%&gt;%</span></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">t</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.data.frame</span>()</span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a>teo1_snp <span class="ot">&lt;-</span> all_data <span class="sc">%&gt;%</span></span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(Category <span class="sc">==</span> <span class="st">"Teosinte"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rbind</span>(all_data[<span class="fu">c</span>(<span class="st">"Chromosome"</span>, <span class="st">"Position"</span>),]) <span class="sc">%&gt;%</span></span>
+<span id="cb36-10"><a href="#cb36-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">t</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb36-11"><a href="#cb36-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.data.frame</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This code filters the data to create 40 files, two per each maize and teosinte group. 10 files per group are organized by increasing SNP, and 10 files per group are organized by decreasing SNP.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>chromosome_files <span class="ot">&lt;-</span> <span class="cf">function</span>(df, group_name, chromosome) {</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>  df_inc <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span> (Chromosome <span class="sc">==</span> chromosome) <span class="sc">%&gt;%</span></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span> (Position) <span class="sc">%&gt;%</span></span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">everything</span>(), <span class="sc">~</span><span class="fu">ifelse</span>(<span class="fu">is.na</span>(.), <span class="st">"?"</span>, .)))</span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write.csv</span>(df_inc, <span class="fu">sprintf</span>(<span class="st">"%s_chr%s_inc.csv"</span>, group_name, chromosome), <span class="at">row.names =</span> <span class="cn">FALSE</span>, <span class="at">quote =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>    df_dec <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>      <span class="fu">filter</span> (Chromosome <span class="sc">==</span> chromosome) <span class="sc">%&gt;%</span></span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a>      <span class="fu">arrange</span>(<span class="fu">desc</span>(Position)) <span class="sc">%&gt;%</span></span>
+<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a>      <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">everything</span>(), <span class="sc">~</span><span class="fu">ifelse</span>(<span class="fu">is.na</span>(.), <span class="st">"-"</span>, .)))</span>
+<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">write.csv</span>(df_dec, <span class="fu">sprintf</span>(<span class="st">"%s_chr%s_dec.csv"</span>, group_name, chromosome), <span class="at">row.names =</span> <span class="cn">FALSE</span>, <span class="at">quote =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a>group <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">maize =</span> maize1_snp, <span class="at">teosinte =</span> teo1_snp)</span>
+<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a><span class="fu">lapply</span>(<span class="fu">names</span>(group), <span class="cf">function</span>(group_name) {</span>
+<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a>  chromosomes <span class="ot">&lt;-</span> <span class="fu">unique</span>(group[[group_name]]<span class="sc">$</span>Chromosome)</span>
+<span id="cb37-17"><a href="#cb37-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lapply</span>(chromosomes, <span class="cf">function</span>(chromosome) {</span>
+<span id="cb37-18"><a href="#cb37-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">chromosome_files</span>(group[[group_name]], group_name, chromosome)</span>
+<span id="cb37-19"><a href="#cb37-19" aria-hidden="true" tabindex="-1"></a>    })</span>
+<span id="cb37-20"><a href="#cb37-20" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+[[1]][[1]]
+NULL
+
+[[1]][[2]]
+NULL
+
+[[1]][[3]]
+NULL
+
+[[1]][[4]]
+NULL
+
+[[1]][[5]]
+NULL
+
+[[1]][[6]]
+NULL
+
+[[1]][[7]]
+NULL
+
+[[1]][[8]]
+NULL
+
+[[1]][[9]]
+NULL
+
+[[1]][[10]]
+NULL
+
+[[1]][[11]]
+NULL
+
+[[1]][[12]]
+NULL
+
+[[1]][[13]]
+NULL
+
+
+[[2]]
+[[2]][[1]]
+NULL
+
+[[2]][[2]]
+NULL
+
+[[2]][[3]]
+NULL
+
+[[2]][[4]]
+NULL
+
+[[2]][[5]]
+NULL
+
+[[2]][[6]]
+NULL
+
+[[2]][[7]]
+NULL
+
+[[2]][[8]]
+NULL
+
+[[2]][[9]]
+NULL
+
+[[2]][[10]]
+NULL
+
+[[2]][[11]]
+NULL
+
+[[2]][[12]]
+NULL
+
+[[2]][[13]]
+NULL</code></pre>
+</div>
+</div>
+<p><strong>Data Visualization</strong></p>
+<p>This code shows SNP count by Chromosome</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>plot_data <span class="ot">&lt;-</span>all_data <span class="sc">%&gt;%</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">t</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">numeric_data =</span> <span class="fu">as.numeric</span>(<span class="fu">as.character</span>(Position)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: There was 1 warning in `mutate()`.
+ℹ In argument: `numeric_data = as.numeric(as.character(Position))`.
+Caused by warning:
+! NAs introduced by coercion</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>plot_data <span class="sc">%&gt;%</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(Chromosome) <span class="sc">%&gt;%</span></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Chromosome, <span class="at">y =</span> n)) <span class="sc">+</span></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"identity"</span>, <span class="at">position =</span> <span class="fu">position_dodge</span>(), <span class="at">fill =</span> <span class="st">"purple"</span>)<span class="sc">+</span></span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"SNP by Chromosome"</span>, <span class="at">c =</span> <span class="st">"Chromome"</span>, <span class="at">y =</span> <span class="st">"SNP Count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="R-Assignment-Final_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>This code creates two plots, one with Maize SNP Count and one with Teosinte SNP Count - appears to be the same.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co">#SNP by maize and teo group</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>maize1_snp <span class="sc">%&gt;%</span></span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(Chromosome) <span class="sc">%&gt;%</span></span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Chromosome, <span class="at">y =</span> n)) <span class="sc">+</span></span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"identity"</span>, <span class="at">position =</span> <span class="fu">position_dodge</span>(), <span class="at">fill =</span> <span class="st">"yellow"</span>)<span class="sc">+</span></span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Maize SNP Count"</span>, <span class="at">c =</span> <span class="st">"Chromome"</span>, <span class="at">y =</span> <span class="st">"SNP Count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="R-Assignment-Final_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>teo1_snp <span class="sc">%&gt;%</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(Chromosome) <span class="sc">%&gt;%</span></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Chromosome, <span class="at">y =</span> n)) <span class="sc">+</span></span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"identity"</span>, <span class="at">position =</span> <span class="fu">position_dodge</span>(), <span class="at">fill =</span> <span class="st">"green"</span>)<span class="sc">+</span></span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Teosinte SNP Count"</span>, <span class="at">c =</span> <span class="st">"Chromome"</span>, <span class="at">y =</span> <span class="st">"SNP Count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="R-Assignment-Final_files/figure-html/unnamed-chunk-8-2.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>This code creates a normalized plot of Homozygous, Heterozygous, and Missing Data</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>all_data_pivot <span class="ot">&lt;-</span> all_data <span class="sc">%&gt;%</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">"..."</span>), <span class="at">names_to =</span> <span class="st">"SNP"</span>, <span class="at">values_to =</span> <span class="st">"Genotype"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Homo =</span> <span class="fu">case_when</span>(</span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>    Genotype <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"A/A"</span>, <span class="st">"C/C"</span>, <span class="st">"G/G"</span>, <span class="st">"T/T"</span>) <span class="sc">~</span> <span class="st">"Homo"</span>,</span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>    Genotype <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"?/A"</span>, <span class="st">"?/C"</span>, <span class="st">"?/G"</span>, <span class="st">"?/T"</span>, <span class="st">"A/?"</span>,<span class="st">"C/?"</span>,<span class="st">"G/?"</span>, <span class="st">"T/?"</span>,<span class="st">"?/?"</span>) <span class="sc">~</span> <span class="st">"Missing"</span>,</span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"Hetero"</span></span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a>     )) <span class="sc">%&gt;%</span></span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(Homo) <span class="sc">%&gt;%</span></span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a>      <span class="fu">summarize</span>(<span class="at">Count=</span><span class="fu">n</span>(), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span>
+<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">head</span>(all_data_pivot)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  Homo      Count
+  &lt;chr&gt;     &lt;int&gt;
+1 Hetero   424644
+2 Homo    1977393
+3 Missing  117392</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>    all_data_pivot <span class="sc">%&gt;%</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Homo, <span class="at">y=</span>Count, <span class="at">fill =</span> Homo, position)) <span class="sc">+</span></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"identity"</span>, <span class="at">fill=</span><span class="st">'red'</span>, <span class="at">position =</span> <span class="fu">position_dodge2</span>())<span class="sc">+</span></span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Homozygous, Heterozygous, Missing Data"</span>,</span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">x=</span><span class="st">"Group"</span>, <span class="at">y=</span><span class="st">"Value"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="R-Assignment-Final_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co">#also show homo/hetero/missing by sample    </span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>sample_long <span class="ot">&lt;-</span> all_data <span class="sc">%&gt;%</span></span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">"..."</span>), <span class="at">names_to =</span> <span class="st">"SNP"</span>, <span class="at">values_to =</span> <span class="st">"Genotype"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Homo =</span> <span class="fu">case_when</span>(</span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>    Genotype <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"A/A"</span>, <span class="st">"C/C"</span>, <span class="st">"G/G"</span>, <span class="st">"T/T"</span>) <span class="sc">~</span> <span class="st">"Homo"</span>,</span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>    Genotype <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"?/A"</span>, <span class="st">"?/C"</span>, <span class="st">"?/G"</span>, <span class="st">"?/T"</span>, <span class="st">"A/?"</span>,<span class="st">"C/?"</span>,<span class="st">"G/?"</span>, <span class="st">"T/?"</span>,<span class="st">"?/?"</span>) <span class="sc">~</span> <span class="st">"Missing"</span>,</span>
+<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"Hetero"</span></span>
+<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a>sample_long <span class="sc">%&gt;%</span></span>
+<span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Sample_ID, Homo) <span class="sc">%&gt;%</span></span>
+<span id="cb47-11"><a href="#cb47-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">Count =</span> <span class="fu">n</span>(), <span class="at">.groups =</span> <span class="st">"drop"</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb47-12"><a href="#cb47-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Sample_ID, <span class="at">y =</span> Count, <span class="at">fill =</span> Homo)) <span class="sc">+</span>  </span>
+<span id="cb47-13"><a href="#cb47-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">position =</span> <span class="st">"fill"</span>) <span class="sc">+</span>  </span>
+<span id="cb47-14"><a href="#cb47-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Proportion of Homozygous, Heterozygous, and Missing Data by sample"</span>,</span>
+<span id="cb47-15"><a href="#cb47-15" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"sample"</span>, <span class="at">y =</span> <span class="st">"Proportion"</span>) <span class="sc">+</span></span>
+<span id="cb47-16"><a href="#cb47-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="cn">NULL</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="R-Assignment-Final_files/figure-html/unnamed-chunk-9-2.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>This code looks at the plot of count per specific group previously analyzed</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>all_data <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Group) <span class="sc">%&gt;%</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">count=</span><span class="fu">length</span>(Group)) <span class="sc">%&gt;%</span></span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Group, <span class="at">y=</span>count)) <span class="sc">+</span></span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"identity"</span>, <span class="at">position =</span> <span class="fu">position_dodge</span>(), <span class="at">fill =</span> <span class="st">"pink"</span>)<span class="sc">+</span></span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Group Identity"</span>, <span class="at">c =</span> <span class="st">"Group"</span>, <span class="at">y =</span> <span class="st">"Count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="R-Assignment-Final_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
